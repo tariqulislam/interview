@@ -1,0 +1,2188 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コンビニ アルバイト 面接ガイド | Convenience Store Part-Time Interview Guide</title>
+  <style>
+    :root {
+      --primary: #e63946;
+      --secondary: #457b9d;
+      --accent: #f4a261;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --text: #212529;
+      --muted: #6c757d;
+      --border: #dee2e6;
+      --jp-pink: #fce4ec;
+      --jp-blue: #e3f2fd;
+      --jp-green: #e8f5e9;
+      --jp-orange: #fff3e0;
+      --jp-purple: #f3e5f5;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, #c62828 100%);
+      color: white;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+    }
+    header .flag { font-size: 2.5rem; margin-bottom: .5rem; }
+    header h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: .03em; }
+    header h1 span { display: block; font-size: 1.1rem; font-weight: 400; margin-top: .3rem; opacity: .9; }
+    header p { margin-top: .7rem; font-size: .95rem; opacity: .85; }
+
+    /* ── Sticky Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: #fff; border-bottom: 2px solid var(--primary);
+      padding: .6rem 1rem;
+      display: flex; flex-wrap: wrap; gap: .5rem; justify-content: center;
+    }
+    nav a {
+      text-decoration: none; color: var(--primary);
+      font-size: .82rem; font-weight: 600;
+      padding: .3rem .75rem; border-radius: 20px;
+      border: 1.5px solid var(--primary);
+      transition: all .2s;
+    }
+    nav a:hover { background: var(--primary); color: white; }
+
+    /* ── Layout ── */
+    main { max-width: 900px; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
+
+    /* ── Section Headings ── */
+    .section-title {
+      display: flex; align-items: center; gap: .7rem;
+      background: linear-gradient(90deg, var(--primary), var(--secondary));
+      color: white; padding: .8rem 1.2rem; border-radius: 10px;
+      font-size: 1.15rem; font-weight: 700; margin: 2.5rem 0 1.2rem;
+    }
+    .section-title .icon { font-size: 1.4rem; }
+
+    /* ── Card ── */
+    .card {
+      background: var(--card-bg); border-radius: 12px;
+      border: 1.5px solid var(--border);
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .card-header {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .75rem 1.1rem .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .card-header .num {
+      background: var(--primary); color: white;
+      width: 28px; height: 28px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .78rem; font-weight: 700; flex-shrink: 0;
+    }
+    .card-header .label {
+      font-size: .72rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--muted);
+    }
+
+    /* ── Q&A blocks ── */
+    .qa-block { padding: .9rem 1.1rem 1rem; }
+
+    .jp-sentence {
+      font-size: 1.25rem; font-weight: 700; color: #c62828;
+      line-height: 1.8;
+    }
+    .hiragana {
+      font-size: .92rem; color: var(--secondary); margin-top: .1rem;
+    }
+    .english {
+      font-size: .88rem; color: #444; margin-top: .3rem;
+      font-style: italic;
+    }
+    .romaji {
+      font-size: .78rem; color: var(--muted); margin-top: .15rem;
+    }
+
+    /* ── Answer block ── */
+    .answer-wrap { margin-top: .9rem; }
+    .answer-label {
+      font-size: .7rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: .35rem;
+    }
+    .answer-item {
+      background: var(--jp-green);
+      border-left: 4px solid #43a047;
+      border-radius: 0 8px 8px 0;
+      padding: .55rem .9rem;
+      margin-bottom: .5rem;
+    }
+    .answer-item .jp-sentence { font-size: 1.1rem; color: #2e7d32; }
+    .answer-item .hiragana { color: #558b2f; }
+    .answer-item .english { color: #555; }
+
+    /* ── Dialect badge ── */
+    .dialect-block {
+      background: var(--jp-orange);
+      border: 1.5px dashed var(--accent);
+      border-radius: 8px;
+      padding: .7rem 1rem;
+      margin-top: .8rem;
+    }
+    .dialect-block .dialect-title {
+      font-size: .72rem; font-weight: 700; color: #e65100;
+      letter-spacing: .08em; text-transform: uppercase; margin-bottom: .4rem;
+    }
+    .dialect-item { margin-bottom: .35rem; }
+    .dialect-item .jp-sentence { font-size: 1rem; color: #bf360c; }
+    .dialect-item .hiragana { font-size: .85rem; color: #e65100; }
+
+    /* ── Tip box ── */
+    .tip {
+      background: var(--jp-purple);
+      border-left: 4px solid #7b1fa2;
+      border-radius: 0 8px 8px 0;
+      padding: .6rem 1rem;
+      margin-top: .75rem;
+      font-size: .83rem; color: #4a148c;
+    }
+    .tip strong { font-weight: 700; }
+
+    /* ── Intro note ── */
+    .intro-note {
+      background: var(--jp-blue);
+      border: 1.5px solid #90caf9;
+      border-radius: 10px; padding: 1rem 1.2rem; margin-bottom: 1.5rem;
+      font-size: .88rem;
+    }
+    .intro-note h3 { color: var(--secondary); margin-bottom: .4rem; font-size: 1rem; }
+
+    /* ── How to use legend ── */
+    .legend {
+      display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .7rem;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: .3rem; font-size: .78rem;
+    }
+    .legend-dot {
+      width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0;
+    }
+
+    /* ── Vocab table ── */
+    .vocab-table {
+      width: 100%; border-collapse: collapse; font-size: .88rem;
+      margin-top: .5rem;
+    }
+    .vocab-table th {
+      background: var(--secondary); color: white;
+      padding: .5rem .8rem; text-align: left; font-size: .8rem;
+    }
+    .vocab-table td {
+      padding: .45rem .8rem; border-bottom: 1px solid var(--border);
+    }
+    .vocab-table tr:nth-child(even) td { background: #f0f7ff; }
+    .vocab-table .jp { font-weight: 700; font-size: 1rem; color: var(--primary); }
+    .vocab-table .hira { font-size: .82rem; color: var(--secondary); }
+
+    /* ── Polite levels ── */
+    .levels { display: flex; flex-direction: column; gap: .5rem; margin-top: .6rem; }
+    .level-item {
+      display: grid; grid-template-columns: 80px 1fr;
+      gap: .5rem; align-items: start;
+    }
+    .level-badge {
+      font-size: .7rem; font-weight: 700; padding: .25rem .5rem;
+      border-radius: 20px; text-align: center; letter-spacing: .04em;
+    }
+    .level-formal { background: #c8e6c9; color: #1b5e20; }
+    .level-normal { background: #bbdefb; color: #0d47a1; }
+    .level-casual { background: #ffe0b2; color: #bf360c; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.4rem; }
+      .jp-sentence { font-size: 1.1rem; }
+      .section-title { font-size: 1rem; }
+    }
+
+    /* ── Print ── */
+    @media print {
+      nav { display: none; }
+      .card { break-inside: avoid; }
+    }
+
+    footer {
+      text-align: center; padding: 2rem 1rem;
+      font-size: .8rem; color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════
+     HEADER
+═════════════════════════════════════════════ -->
+<header>
+  <div class="flag">🇯🇵</div>
+  <h1>コンビニ アルバイト 面接ガイド
+    <span>Convenience Store Part-Time Interview Guide</span>
+  </h1>
+  <p>Complete Q&amp;A with Hiragana readings, English meanings &amp; local dialect variations</p>
+</header>
+
+<!-- ════════════════════════════════════════════
+     STICKY NAV
+═════════════════════════════════════════════ -->
+<nav>
+  <a href="#intro">How to Use</a>
+  <a href="#self">Self Introduction</a>
+  <a href="#schedule">Schedule &amp; Hours</a>
+  <a href="#start">Start Date</a>
+  <a href="#family">Family &amp; Living</a>
+  <a href="#work">Work Ability</a>
+  <a href="#exp">Experience</a>
+  <a href="#lang">Language</a>
+  <a href="#motivation">Motivation</a>
+  <a href="#salary">Pay &amp; Contract</a>
+  <a href="#closing">Closing</a>
+  <a href="#duties">Daily Duties</a>
+  <a href="#phrases">On-the-Job Phrases</a>
+  <a href="#difficult">Difficult Situations</a>
+  <a href="#etiquette">Interview Manner</a>
+  <a href="#afterinterview">After Interview</a>
+  <a href="#vocab">Key Vocab</a>
+</nav>
+
+<main>
+
+<!-- ════════════════════════════════════════════
+     INTRO NOTE
+═════════════════════════════════════════════ -->
+<section id="intro">
+  <div class="intro-note">
+    <h3>📖 How to Use This Guide</h3>
+    <p>Each card shows: <strong>① The interviewer's question</strong> in big red Japanese → hiragana reading → English meaning, then <strong>② Sample answers</strong> you can use, and <strong>③ Local dialect versions</strong> (Kansai / Tokyo variations where common).</p>
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#c62828"></div> Question (Japanese)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#457b9d"></div> Hiragana reading</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#43a047"></div> Sample answer</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f4a261"></div> Dialect / local variation</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7b1fa2"></div> Tip</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     1. SELF INTRODUCTION
+═════════════════════════════════════════════ -->
+<section id="self">
+  <div class="section-title"><span class="icon">👋</span> 1. Self Introduction｜自己紹介</div>
+
+  <!-- Q1 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">1</div>
+      <div class="label">Opening Question</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">自己紹介をお願いします。</div>
+      <div class="hiragana">じこしょうかいをおねがいします。</div>
+      <div class="english">Please introduce yourself.</div>
+      <div class="romaji">Jiko shōkai wo onegai shimasu.</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はじめまして。〇〇（名前）と申します。どうぞよろしくお願いいたします。</div>
+          <div class="hiragana">はじめまして。〇〇（なまえ）ともうします。どうぞよろしくおねがいいたします。</div>
+          <div class="english">Nice to meet you. My name is 〇〇. Please take care of me.</div>
+        </div>
+      </div>
+
+      <div class="tip"><strong>Tip:</strong> Bow slightly (約15度/やく15ど) when saying this. Speaking slowly and clearly is more important than speed.</div>
+    </div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">2</div>
+      <div class="label">Name</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">お名前を教えていただけますか？</div>
+      <div class="hiragana">おなまえをおしえていただけますか？</div>
+      <div class="english">Could you please tell me your name?</div>
+      <div class="romaji">Onamae wo oshiete itadakemasu ka?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇〇（名前）と申します。よろしくお願いいたします。</div>
+          <div class="hiragana">〇〇（なまえ）ともうします。よろしくおねがいいたします。</div>
+          <div class="english">My name is 〇〇. It's a pleasure to meet you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">3</div>
+      <div class="label">Age</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">お年齢を聞いてもよろしいですか？</div>
+      <div class="hiragana">おねんれいをきいてもよろしいですか？</div>
+      <div class="english">May I ask how old you are?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇〇歳です。</div>
+          <div class="hiragana">〇〇さいです。</div>
+          <div class="english">I am 〇〇 years old.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">4</div>
+      <div class="label">Nationality / Visa</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">国籍とビザの種類を教えていただけますか？</div>
+      <div class="hiragana">こくせきとびざのしゅるいをおしえていただけますか？</div>
+      <div class="english">Could you tell me your nationality and type of visa?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇〇（国名）出身です。ビザは「配偶者ビザ」を持っています。週28時間以上働くことができます。</div>
+          <div class="hiragana">〇〇（くにめい）しゅっしんです。びざは「はいぐうしゃびざ」をもっています。しゅう28じかんいじょうはたらくことができます。</div>
+          <div class="english">I am from 〇〇 (country). I have a spouse visa. I can work more than 28 hours per week.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">在留カードを持参しています。ご確認いただけますか？</div>
+          <div class="hiragana">ざいりゅうかーどをじさんしています。ごかくにんいただけますか？</div>
+          <div class="english">I have brought my residence card. Could you check it?</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Always bring your 在留カード（ざいりゅうかーど）residence card to the interview.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     2. SCHEDULE & HOURS
+═════════════════════════════════════════════ -->
+<section id="schedule">
+  <div class="section-title"><span class="icon">📅</span> 2. Schedule &amp; Working Hours｜シフト・勤務時間</div>
+
+  <!-- Q5 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">5</div>
+      <div class="label">Available Days</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">何曜日に出勤できますか？</div>
+      <div class="hiragana">なんようびにしゅっきんできますか？</div>
+      <div class="english">Which days of the week can you come to work?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">月曜日から金曜日まで出勤できます。</div>
+          <div class="hiragana">げつようびからきんようびまでしゅっきんできます。</div>
+          <div class="english">I can work from Monday to Friday.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">週5日、どの曜日でも大丈夫です。</div>
+          <div class="hiragana">しゅう5にち、どのようびでもだいじょうぶです。</div>
+          <div class="english">I'm okay with any day, 5 days a week.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">土日も出勤可能です。</div>
+          <div class="hiragana">どにちもしゅっきんかのうです。</div>
+          <div class="english">I can also work on weekends.</div>
+        </div>
+      </div>
+
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Local Dialect Versions</div>
+        <div class="dialect-item">
+          <div class="answer-label">Kansai (Osaka/Kyoto) dialect:</div>
+          <div class="jp-sentence">何曜日に来られますか？</div>
+          <div class="hiragana">なんようびにこられますか？</div>
+          <div class="english">Which days can you come? (casual Kansai style)</div>
+        </div>
+        <div class="dialect-item" style="margin-top:.5rem">
+          <div class="answer-label">Tokyo (standard) — more formal:</div>
+          <div class="jp-sentence">ご都合のよい曜日はいつでしょうか？</div>
+          <div class="hiragana">ごつごうのよいようびはいつでしょうか？</div>
+          <div class="english">What days are convenient for you?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">6</div>
+      <div class="label">Working Hours Per Day</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">1日に何時間働けますか？</div>
+      <div class="hiragana">いちにちになんじかんはたらけますか？</div>
+      <div class="english">How many hours per day can you work?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">1日に6〜8時間働けます。</div>
+          <div class="hiragana">いちにちに6〜8じかんはたらけます。</div>
+          <div class="english">I can work 6 to 8 hours per day.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">フルタイムに近い時間帯を希望しています。</div>
+          <div class="hiragana">ふるたいむにちかいじかんたいをきぼうしています。</div>
+          <div class="english">I hope to work close to full-time hours.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">7</div>
+      <div class="label">Preferred Time Slot</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">希望の時間帯はいつですか？（早番・遅番・深夜）</div>
+      <div class="hiragana">きぼうのじかんたいはいつですか？（はやばん・おそばん・しんや）</div>
+      <div class="english">What time slot do you prefer? (Early shift / Late shift / Night shift)</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">午前中（9時〜15時ごろ）が希望です。</div>
+          <div class="hiragana">ごぜんちゅう（9じ〜15じごろ）がきぼうです。</div>
+          <div class="english">I prefer mornings (around 9am to 3pm).</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">早番・昼番どちらでも対応できます。</div>
+          <div class="hiragana">はやばん・ひるばんどちらでもたいおうできます。</div>
+          <div class="english">I can handle both early and afternoon shifts.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">深夜は難しいですが、それ以外は大丈夫です。</div>
+          <div class="hiragana">しんやはむずかしいですが、それいがいはだいじょうぶです。</div>
+          <div class="english">Late-night shifts are difficult, but any other time is fine.</div>
+        </div>
+      </div>
+
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Kansai Dialect — Interviewer may say:</div>
+        <div class="dialect-item">
+          <div class="jp-sentence">朝いちは来られますか？</div>
+          <div class="hiragana">あさいちはこられますか？</div>
+          <div class="english">Can you come first thing in the morning? (Kansai: "朝いち" = first of the morning)</div>
+        </div>
+        <div class="dialect-item" style="margin-top:.5rem">
+          <div class="jp-sentence">夜遅うてもOKですか？</div>
+          <div class="hiragana">よるおそうてもおーけーですか？</div>
+          <div class="english">Is it okay even if it's late at night? (Osaka dialect: 遅うて = 遅くて)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">8</div>
+      <div class="label">Weekly Hours</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">週に何時間くらい働ける予定ですか？</div>
+      <div class="hiragana">しゅうになんじかんくらいはたらけるよていですか？</div>
+      <div class="english">About how many hours per week are you planning to work?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">週に20〜30時間ほど働けると思います。</div>
+          <div class="hiragana">しゅうに20〜30じかんほどはたらけるとおもいます。</div>
+          <div class="english">I think I can work about 20–30 hours per week.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">ビザの制限内で最大限働きたいと思っています。</div>
+          <div class="hiragana">びざのせいげんないでさいだいげんはたらきたいとおもっています。</div>
+          <div class="english">I want to work as much as possible within my visa limits.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">9</div>
+      <div class="label">Days Off Request</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">休みたい曜日や時間帯はありますか？</div>
+      <div class="hiragana">やすみたいようびやじかんたいはありますか？</div>
+      <div class="english">Are there any days or times you would like off?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">特にありません。シフトに合わせます。</div>
+          <div class="hiragana">とくにありません。しふとにあわせます。</div>
+          <div class="english">Nothing in particular. I will adjust to the shift schedule.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">日曜の夜だけ少し難しいですが、他は大丈夫です。</div>
+          <div class="hiragana">にちようのよるだけすこしむずかしいですが、ほかはだいじょうぶです。</div>
+          <div class="english">Sunday nights are a little difficult, but other times are fine.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     3. START DATE
+═════════════════════════════════════════════ -->
+<section id="start">
+  <div class="section-title"><span class="icon">🗓️</span> 3. When Can You Start?｜いつから働けますか</div>
+
+  <!-- Q10 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">10</div>
+      <div class="label">Start Date</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">いつから働けますか？</div>
+      <div class="hiragana">いつからはたらけますか？</div>
+      <div class="english">From when can you work?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">採用していただければ、すぐにでも働けます。</div>
+          <div class="hiragana">さいようしていただければ、すぐにでもはたらけます。</div>
+          <div class="english">If hired, I can start right away.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">来週から働くことができます。</div>
+          <div class="hiragana">らいしゅうからはたらくことができます。</div>
+          <div class="english">I can start from next week.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇月〇日から勤務開始できます。</div>
+          <div class="hiragana">〇がつ〇にちからきんむかいしできます。</div>
+          <div class="english">I can start working from (month) (date).</div>
+        </div>
+      </div>
+
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Local / Casual Variations</div>
+        <div class="dialect-item">
+          <div class="answer-label">Kansai (Osaka) — interviewer may ask:</div>
+          <div class="jp-sentence">いつから来られますか？</div>
+          <div class="hiragana">いつからこられますか？</div>
+          <div class="english">From when can you come? (very natural Kansai phrasing)</div>
+        </div>
+        <div class="dialect-item" style="margin-top:.5rem">
+          <div class="jp-sentence">早よ来てもらえたら助かるんやけど。</div>
+          <div class="hiragana">はよきてもらえたらたすかるんやけど。</div>
+          <div class="english">It'd be a big help if you could come soon. (Osaka: 早よ = 早く)</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Saying "すぐにでも" (immediately) shows eagerness. If you need time, give a specific date — vague answers like 「そのうち」 (sometime) sound unprepared.</div>
+    </div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">11</div>
+      <div class="label">How Long Will You Work?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">どのくらいの期間、働く予定ですか？</div>
+      <div class="hiragana">どのくらいのきかん、はたらくよていですか？</div>
+      <div class="english">For how long are you planning to work?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">長期で働きたいと思っています。</div>
+          <div class="hiragana">ちょうきではたらきたいとおもっています。</div>
+          <div class="english">I'm hoping to work long-term.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">少なくとも1年以上は続けたいです。</div>
+          <div class="hiragana">すくなくとも1ねんいじょうはつづけたいです。</div>
+          <div class="english">I'd like to continue for at least one year or more.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Convenience stores prefer long-term workers — saying 長期（ちょうき）is a strong positive signal.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     4. FAMILY & WHERE YOU LIVE
+═════════════════════════════════════════════ -->
+<section id="family">
+  <div class="section-title"><span class="icon">🏠</span> 4. Family &amp; Living Situation｜家族・住まい</div>
+
+  <!-- Q12 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">12</div>
+      <div class="label">Where Do You Live?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">現在、どちらにお住まいですか？</div>
+      <div class="hiragana">げんざい、どちらにおすまいですか？</div>
+      <div class="english">Where are you currently living?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇〇（地名）に住んでいます。</div>
+          <div class="hiragana">〇〇（ちめい）にすんでいます。</div>
+          <div class="english">I live in 〇〇 (place name).</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">こちらの店から自転車で10分ほどの距離に住んでいます。</div>
+          <div class="hiragana">こちらのみせからじてんしゃで10ぷんほどのきょりにすんでいます。</div>
+          <div class="english">I live about 10 minutes by bicycle from this store.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q13 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">13</div>
+      <div class="label">How Do You Commute?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">通勤手段は何ですか？</div>
+      <div class="hiragana">つうきんしゅだんはなんですか？</div>
+      <div class="english">What is your method of commuting?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">自転車で来ます。</div>
+          <div class="hiragana">じてんしゃできます。</div>
+          <div class="english">I will come by bicycle.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">電車とバスを使って通勤します。</div>
+          <div class="hiragana">でんしゃとばすをつかってつうきんします。</div>
+          <div class="english">I will commute by train and bus.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">徒歩で来られます。</div>
+          <div class="hiragana">とほできられます。</div>
+          <div class="english">I can come on foot.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q14 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">14</div>
+      <div class="label">Family Situation</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">ご家族はいらっしゃいますか？</div>
+      <div class="hiragana">ごかぞくはいらっしゃいますか？</div>
+      <div class="english">Do you have family (here)?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">夫（妻）が日本で仕事をしています。二人で暮らしています。</div>
+          <div class="hiragana">おっと（つま）がにほんでしごとをしています。ふたりでくらしています。</div>
+          <div class="english">My husband (wife) works in Japan. We live together as a couple.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">子供はいませんので、シフトには柔軟に対応できます。</div>
+          <div class="hiragana">こどもはいませんので、しふとにはじゅうなんにたいおうできます。</div>
+          <div class="english">I don't have children, so I can be flexible with the shift.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">子供がいますが、保育園に通っているので平日は問題ありません。</div>
+          <div class="hiragana">こどもがいますが、ほいくえんにかよっているのでへいじつはもんだいありません。</div>
+          <div class="english">I have children, but they go to nursery school so weekdays are no problem.</div>
+        </div>
+      </div>
+
+      <div class="tip"><strong>Tip:</strong> You are NOT legally required to disclose detailed family information. Answer only what you are comfortable sharing. Focus on reassuring them about your availability.</div>
+    </div>
+  </div>
+
+  <!-- Q15 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">15</div>
+      <div class="label">How Long Have You Lived in Japan?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">日本に来てどのくらいになりますか？</div>
+      <div class="hiragana">にほんにきてどのくらいになりますか？</div>
+      <div class="english">How long have you been in Japan?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇ヶ月（年）になります。</div>
+          <div class="hiragana">〇かげつ（ねん）になります。</div>
+          <div class="english">It has been 〇 months (years).</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">まだ日本に来て間もないですが、毎日日本語の勉強をしています。</div>
+          <div class="hiragana">まだにほんにきてまもないですが、まいにちにほんごのべんきょうをしています。</div>
+          <div class="english">I haven't been in Japan long yet, but I study Japanese every day.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q16 — Dialect for living area -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">16</div>
+      <div class="label">Can You Come on Short Notice? (Local casual)</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">急なシフト変更にも対応できますか？</div>
+      <div class="hiragana">きゅうなしふとへんこうにもたいおうできますか？</div>
+      <div class="english">Can you handle sudden shift changes?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、できる限り対応します。</div>
+          <div class="hiragana">はい、できるかぎりたいおうします。</div>
+          <div class="english">Yes, I will respond as best I can.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">近くに住んでいますので、急な場合でも来やすいです。</div>
+          <div class="hiragana">ちかくにすんでいますので、きゅうなばあいでもきやすいです。</div>
+          <div class="english">Since I live nearby, it's easy for me to come even on short notice.</div>
+        </div>
+      </div>
+
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Dialect Versions — Interviewer may say</div>
+        <div class="dialect-item">
+          <div class="answer-label">Kansai:</div>
+          <div class="jp-sentence">急やっても来られる？</div>
+          <div class="hiragana">きゅうやってもこられる？</div>
+          <div class="english">Can you come even at short notice? (Osaka casual: やっても = でも)</div>
+        </div>
+        <div class="dialect-item" style="margin-top:.5rem">
+          <div class="answer-label">Tohoku (Northern Japan):</div>
+          <div class="jp-sentence">急でも来れっかい？</div>
+          <div class="hiragana">きゅうでもこれっかい？</div>
+          <div class="english">Can you come at short notice? (Northern dialect: 来れっかい = 来られますか)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     5. WORK ABILITY
+═════════════════════════════════════════════ -->
+<section id="work">
+  <div class="section-title"><span class="icon">💪</span> 5. What Work Can You Do?｜できる仕事・できない仕事</div>
+
+  <!-- Q17 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">17</div>
+      <div class="label">What Tasks Can You Do?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">どんな仕事ができますか？</div>
+      <div class="hiragana">どんなしごとができますか？</div>
+      <div class="english">What kind of work can you do?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">レジ打ちや商品の陳列、清掃など基本的な作業はできます。</div>
+          <div class="hiragana">れじうちやしょうひんのちんれつ、せいそうなどきほんてきなさぎょうはできます。</div>
+          <div class="english">I can do basic tasks such as cashier work, stocking shelves, and cleaning.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">お客様への対応も、笑顔で丁寧に行う自信があります。</div>
+          <div class="hiragana">おきゃくさまへのたいおうも、えがおでていねいにおこなうじしんがあります。</div>
+          <div class="english">I'm also confident I can serve customers politely and with a smile.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">食品の管理や廃棄作業も対応できます。</div>
+          <div class="hiragana">しょくひんのかんりやはいきさぎょうもたいおうできます。</div>
+          <div class="english">I can also handle food management and disposal tasks.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q18 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">18</div>
+      <div class="label">Is There Anything You Cannot Do?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">できない仕事や苦手なことはありますか？</div>
+      <div class="hiragana">できないしごとやにがてなことはありますか？</div>
+      <div class="english">Is there any work you cannot do or are not good at?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">お酒・タバコの販売は年齢確認の手順を教えていただければ対応できます。</div>
+          <div class="hiragana">おさけ・たばこのはんばいはねんれいかくにんのてじゅんをおしえていただければたいおうできます。</div>
+          <div class="english">I can handle alcohol and tobacco sales if I'm taught the age verification process.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">今は日本語がまだ完璧ではありませんが、一生懸命覚えています。</div>
+          <div class="hiragana">いまはにほんごがまだかんぺきではありませんが、いっしょうけんめいおぼえています。</div>
+          <div class="english">My Japanese is not yet perfect, but I'm learning it hard every day.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Be honest but always follow up a weakness with a positive commitment to learn or improve.</div>
+    </div>
+  </div>
+
+  <!-- Q19 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">19</div>
+      <div class="label">Can You Stand for Long Periods?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">長時間立ち仕事は大丈夫ですか？</div>
+      <div class="hiragana">ちょうじかんたちしごとはだいじょうぶですか？</div>
+      <div class="english">Is standing work for long hours okay for you?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、大丈夫です。体力には自信があります。</div>
+          <div class="hiragana">はい、だいじょうぶです。たいりょくにはじしんがあります。</div>
+          <div class="english">Yes, that's fine. I'm confident in my physical stamina.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">問題ありません。以前も立ち仕事をしていました。</div>
+          <div class="hiragana">もんだいありません。いぜんもたちしごとをしていました。</div>
+          <div class="english">No problem. I used to do standing work before.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q20 — Register / POS -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">20</div>
+      <div class="label">Can You Use a Cash Register?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">レジの操作はできますか？</div>
+      <div class="hiragana">れじのそうさはできますか？</div>
+      <div class="english">Can you operate a cash register?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、以前の仕事でレジを使ったことがあります。</div>
+          <div class="hiragana">はい、いぜんのしごとでれじをつかったことがあります。</div>
+          <div class="english">Yes, I have used a cash register in my previous job.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">レジの経験はありませんが、すぐに覚えられると思います。</div>
+          <div class="hiragana">れじのけいけんはありませんが、すぐにおぼえられるとおもいます。</div>
+          <div class="english">I don't have cashier experience, but I think I can learn quickly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     6. EXPERIENCE
+═════════════════════════════════════════════ -->
+<section id="exp">
+  <div class="section-title"><span class="icon">📋</span> 6. Work Experience｜職歴・経験</div>
+
+  <!-- Q21 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">21</div>
+      <div class="label">Previous Job Experience</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">これまでのお仕事の経験を教えてください。</div>
+      <div class="hiragana">これまでのおしごとのけいけんをおしえてください。</div>
+      <div class="english">Please tell me about your previous work experience.</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">母国では〇〇（職種）として〇年間働いていました。</div>
+          <div class="hiragana">ぼこくでは〇〇（しょくしゅ）として〇ねんかんはたらいていました。</div>
+          <div class="english">In my home country, I worked as a 〇〇 (job type) for 〇 years.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">接客業の経験があります。お客様対応には慣れています。</div>
+          <div class="hiragana">せっきゃくぎょうのけいけんがあります。おきゃくさまたいおうにはなれています。</div>
+          <div class="english">I have experience in customer service and am accustomed to dealing with customers.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">日本での就業経験はまだありませんが、はりきって頑張ります。</div>
+          <div class="hiragana">にほんでのしゅうぎょうけいけんはまだありませんが、はりきってがんばります。</div>
+          <div class="english">I don't have work experience in Japan yet, but I'm motivated to do my best.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q22 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">22</div>
+      <div class="label">Why Did You Leave Your Previous Job?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">前の仕事を辞めた理由は何ですか？</div>
+      <div class="hiragana">まえのしごとをやめたりゆうはなんですか？</div>
+      <div class="english">Why did you leave your previous job?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">日本に移住したため、前の仕事は辞めました。</div>
+          <div class="hiragana">にほんにいじゅうしたため、まえのしごとはやめました。</div>
+          <div class="english">I left my previous job because I moved to Japan.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">夫（妻）の転勤に伴い来日しました。</div>
+          <div class="hiragana">おっと（つま）のてんきんにともないらいにちしました。</div>
+          <div class="english">I came to Japan along with my husband's (wife's) job transfer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     7. JAPANESE LANGUAGE
+═════════════════════════════════════════════ -->
+<section id="lang">
+  <div class="section-title"><span class="icon">🗣️</span> 7. Japanese Language Ability｜日本語力</div>
+
+  <!-- Q23 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">23</div>
+      <div class="label">Japanese Level</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">日本語はどのくらいできますか？</div>
+      <div class="hiragana">にほんごはどのくらいできますか？</div>
+      <div class="english">How good is your Japanese?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">日常会話は少しできます。勉強中です。</div>
+          <div class="hiragana">にちじょうかいわはすこしできます。べんきょうちゅうです。</div>
+          <div class="english">I can manage a little daily conversation. I am currently studying.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">読み書きは少し難しいですが、聞いて話すことはできます。</div>
+          <div class="hiragana">よみかきはすこしむずかしいですが、きいてはなすことはできます。</div>
+          <div class="english">Reading and writing are a bit difficult, but I can listen and speak.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">日本語能力試験N3を持っています。</div>
+          <div class="hiragana">にほんごのうりょくしけんN3をもっています。</div>
+          <div class="english">I hold JLPT N3 certification.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">毎日アプリで日本語を練習しています。どうかご指導よろしくお願いします。</div>
+          <div class="hiragana">まいにちあぷりでにほんごをれんしゅうしています。どうかごしどうよろしくおねがいします。</div>
+          <div class="english">I practice Japanese every day with an app. I humbly ask for your guidance.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Saying どうかご指導よろしく shows humility and a willingness to learn — this is very well-received in Japanese workplaces.</div>
+    </div>
+  </div>
+
+  <!-- Q24 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">24</div>
+      <div class="label">Can You Communicate With Customers?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">お客様と日本語でコミュニケーションできますか？</div>
+      <div class="hiragana">おきゃくさまとにほんごでこみゅにけーしょんできますか？</div>
+      <div class="english">Can you communicate with customers in Japanese?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">基本的な接客の言葉（いらっしゃいませ・ありがとうございます等）は覚えています。</div>
+          <div class="hiragana">きほんてきなせっきゃくのことば（いらっしゃいませ・ありがとうございますとう）はおぼえています。</div>
+          <div class="english">I have learned the basic customer service phrases (Welcome / Thank you, etc.).</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">難しい質問の場合は他のスタッフを呼んで対応します。</div>
+          <div class="hiragana">むずかしいしつもんのばあいはほかのすたっふをよんでたいおうします。</div>
+          <div class="english">For difficult questions, I will call another staff member to help.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     8. MOTIVATION
+═════════════════════════════════════════════ -->
+<section id="motivation">
+  <div class="section-title"><span class="icon">✨</span> 8. Why This Store?｜志望動機</div>
+
+  <!-- Q25 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">25</div>
+      <div class="label">Why Do You Want to Work Here?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">なぜ当店でアルバイトをしたいと思ったのですか？</div>
+      <div class="hiragana">なぜとうてんでアルバイトをしたいとおもったのですか？</div>
+      <div class="english">Why did you want to work part-time at our store?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">自宅から近く、シフトの融通が利きそうで、長く働けると思いました。</div>
+          <div class="hiragana">じたくからちかく、しふとのゆうずうがきそうで、ながくはたらけるとおもいました。</div>
+          <div class="english">It's close to home, the shifts seem flexible, and I thought I could work here long-term.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">日本語と日本の文化をもっと学びたいと思い、接客業を選びました。</div>
+          <div class="hiragana">にほんごとにほんのぶんかをもっとまなびたいとおもい、せっきゃくぎょうをえらびました。</div>
+          <div class="english">I chose customer service because I want to learn more Japanese and Japanese culture.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">このお店はいつも清潔で、スタッフの方が親切そうだったので応募しました。</div>
+          <div class="hiragana">このおみせはいつもせいけつで、すたっふのかたがしんせつそうだったのでおうぼしました。</div>
+          <div class="english">This store is always clean and the staff seemed kind, so I applied.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q26 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">26</div>
+      <div class="label">What Are Your Strengths?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">あなたの長所を教えてください。</div>
+      <div class="hiragana">あなたのちょうしょをおしえてください。</div>
+      <div class="english">Please tell me your strong points.</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">責任感が強く、任された仕事は最後までやり遂げます。</div>
+          <div class="hiragana">せきにんかんがつよく、まかされたしごとはさいごまでやりとげます。</div>
+          <div class="english">I have a strong sense of responsibility and always complete tasks I am assigned.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">人と接するのが好きで、笑顔で対応できます。</div>
+          <div class="hiragana">ひとと接するのがすきで、えがおでたいおうできます。</div>
+          <div class="english">I enjoy interacting with people and can serve them with a smile.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">新しいことを素早く覚えることが得意です。</div>
+          <div class="hiragana">あたらしいことをすばやくおぼえることがとくいです。</div>
+          <div class="english">I am good at learning new things quickly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     9. PAY & CONTRACT
+═════════════════════════════════════════════ -->
+<section id="salary">
+  <div class="section-title"><span class="icon">💴</span> 9. Pay &amp; Contract｜給料・契約</div>
+
+  <!-- Q27 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">27</div>
+      <div class="label">Asking About Hourly Wage</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">時給はいくらですか？</div>
+      <div class="hiragana">じきゅうはいくらですか？</div>
+      <div class="english">How much is the hourly wage?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ How they may answer / What you may hear</div>
+        <div class="answer-item">
+          <div class="jp-sentence">時給〇〇円からスタートです。試用期間後に昇給があります。</div>
+          <div class="hiragana">じきゅう〇〇えんからすたーとです。しようきかんごにしょうきゅうがあります。</div>
+          <div class="english">Starting hourly wage is 〇〇 yen. There is a raise after the trial period.</div>
+        </div>
+      </div>
+
+      <div class="tip"><strong>Tip:</strong> In Japan it is acceptable to ask about 時給（じきゅう）hourly wage and 交通費（こうつうひ）transport allowance at the interview. Ask politely with: 「〇〇について確認させていただいてもよろしいですか？」(May I confirm about 〇〇?)</div>
+    </div>
+  </div>
+
+  <!-- Q28 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">28</div>
+      <div class="label">Is Transport Allowance Paid?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">交通費は支給されますか？</div>
+      <div class="hiragana">こうつうひはしきゅうされますか？</div>
+      <div class="english">Is a transportation allowance provided?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ How to ask politely</div>
+        <div class="answer-item">
+          <div class="jp-sentence">交通費についても確認させていただいてもよろしいでしょうか？</div>
+          <div class="hiragana">こうつうひについてもかくにんさせていただいてもよろしいでしょうか？</div>
+          <div class="english">May I also confirm about the transportation allowance?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q29 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">29</div>
+      <div class="label">Pay Day / Pay Cycle</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">給料はいつ支払われますか？</div>
+      <div class="hiragana">きゅうりょうはいつしはらわれますか？</div>
+      <div class="english">When is the salary paid?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ What you may hear</div>
+        <div class="answer-item">
+          <div class="jp-sentence">毎月〇日払いです。銀行振込になります。</div>
+          <div class="hiragana">まいつき〇にちばらいです。ぎんこうふりこみになります。</div>
+          <div class="english">It is paid on the 〇th of every month by bank transfer.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q30 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">30</div>
+      <div class="label">Trial / Probation Period</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">試用期間はありますか？</div>
+      <div class="hiragana">しようきかんはありますか？</div>
+      <div class="english">Is there a trial / probation period?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ What you may hear</div>
+        <div class="answer-item">
+          <div class="jp-sentence">最初の1〜3ヶ月は試用期間です。その後、正式採用となります。</div>
+          <div class="hiragana">さいしょの1〜3かげつはしようきかんです。そのご、せいしきさいようとなります。</div>
+          <div class="english">The first 1–3 months are the trial period. After that, you become a regular employee.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     10. CLOSING QUESTIONS
+═════════════════════════════════════════════ -->
+<section id="closing">
+  <div class="section-title"><span class="icon">🙏</span> 10. Closing the Interview｜面接の終わり</div>
+
+  <!-- Q31 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">31</div>
+      <div class="label">Do You Have Any Questions?</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">何かご質問はありますか？</div>
+      <div class="hiragana">なにかごしつもんはありますか？</div>
+      <div class="english">Do you have any questions?</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Good questions to ask</div>
+        <div class="answer-item">
+          <div class="jp-sentence">研修はどのくらいの期間ありますか？</div>
+          <div class="hiragana">けんしゅうはどのくらいのきかんありますか？</div>
+          <div class="english">How long is the training period?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">制服は支給されますか？</div>
+          <div class="hiragana">せいふくはしきゅうされますか？</div>
+          <div class="english">Is a uniform provided?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">特にございません。ぜひよろしくお願いいたします。</div>
+          <div class="hiragana">とくにございません。ぜひよろしくおねがいいたします。</div>
+          <div class="english">Nothing in particular. I sincerely look forward to working here.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Q32 -->
+  <div class="card">
+    <div class="card-header">
+      <div class="num">32</div>
+      <div class="label">Final Words / Closing Statement</div>
+    </div>
+    <div class="qa-block">
+      <div class="jp-sentence">最後に一言お願いします。</div>
+      <div class="hiragana">さいごにひとことおねがいします。</div>
+      <div class="english">Please say one last thing / Please give a closing statement.</div>
+
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Closing Statement</div>
+        <div class="answer-item">
+          <div class="jp-sentence">本日はお時間をいただき、ありがとうございました。もし採用していただけるなら、一生懸命頑張りますので、どうぞよろしくお願いいたします。</div>
+          <div class="hiragana">ほんじつはおじかんをいただき、ありがとうございました。もしさいようしていただけるなら、いっしょうけんめいがんばりますので、どうぞよろしくおねがいいたします。</div>
+          <div class="english">Thank you for your time today. If I am hired, I will work as hard as I can. I sincerely hope to work with you.</div>
+        </div>
+      </div>
+
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Kansai / Friendly Closer (if atmosphere is casual)</div>
+        <div class="dialect-item">
+          <div class="jp-sentence">今日はお時間いただきありがとうございました。精いっぱいやらせてもらいます！</div>
+          <div class="hiragana">きょうはおじかんいただきありがとうございました。せいいっぱいやらせてもらいます！</div>
+          <div class="english">Thank you so much for your time today. I'll give it everything I've got!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     11. DAILY DUTIES
+═════════════════════════════════════════════ -->
+<section id="duties">
+  <div class="section-title"><span class="icon">🏪</span> 11. Daily Duties &amp; Store Tasks｜日常業務</div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">33</div><div class="label">Handling Deliveries</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">納品作業はできますか？</div>
+      <div class="hiragana">のうひんさぎょうはできますか？</div>
+      <div class="english">Can you handle receiving deliveries?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、商品の数を確認して棚に並べる作業はできます。</div>
+          <div class="hiragana">はい、しょうひんのかずをかくにんしてたなにならべるさぎょうはできます。</div>
+          <div class="english">Yes, I can check the quantity of products and arrange them on shelves.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">重い荷物を運ぶ作業も問題ありません。</div>
+          <div class="hiragana">おもいにもつをはこぶさぎょうももんだいありません。</div>
+          <div class="english">Carrying heavy items is also no problem for me.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">34</div><div class="label">Expiry Date Checking</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">賞味期限のチェックはできますか？</div>
+      <div class="hiragana">しょうみきげんのちぇっくはできますか？</div>
+      <div class="english">Can you check expiry dates on products?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、日付を確認して期限切れの商品を取り除く作業はできます。</div>
+          <div class="hiragana">はい、ひづけをかくにんしてきげんぎれのしょうひんをとりのぞくさぎょうはできます。</div>
+          <div class="english">Yes, I can check dates and remove expired products.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> 賞味期限（しょうみきげん）= best-before date for food. 消費期限（しょうひきげん）= use-by date (stricter, must not be sold after).</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">35</div><div class="label">Cleaning Duties</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">店内の清掃も仕事に含まれますが、大丈夫ですか？</div>
+      <div class="hiragana">てんないのせいそうもしごとにふくまれますが、だいじょうぶですか？</div>
+      <div class="english">Cleaning inside the store is part of the job — is that okay?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、全く問題ありません。清潔な店内はお客様のためにも大切だと思います。</div>
+          <div class="hiragana">はい、まったくもんだいありません。せいけつなてんないはおきゃくさまのためにもたいせつだとおもいます。</div>
+          <div class="english">Yes, absolutely no problem. I think a clean store is important for customers too.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">36</div><div class="label">Operating Microwave / Hot Food Equipment</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">電子レンジやホットケースの操作はできますか？</div>
+      <div class="hiragana">でんしれんじやほっとけーすのそうさはできますか？</div>
+      <div class="english">Can you operate the microwave and hot food display case?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、できます。使い方を教えていただければすぐ覚えられます。</div>
+          <div class="hiragana">はい、できます。つかいかたをおしえていただければすぐおぼえられます。</div>
+          <div class="english">Yes, I can. If you teach me how to use it, I'll learn quickly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">37</div><div class="label">Handling Returns / Refunds</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">返品・返金の対応はできますか？</div>
+      <div class="hiragana">へんぴん・へんきんのたいおうはできますか？</div>
+      <div class="english">Can you handle product returns and refunds?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">手順を教えていただければ対応できます。不明な場合は上の方に確認します。</div>
+          <div class="hiragana">てじゅんをおしえていただければたいおうできます。ふめいなばあいはうえのかたにかくにんします。</div>
+          <div class="english">If taught the procedure, I can handle it. For unclear cases, I will check with a senior staff member.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">38</div><div class="label">Handling Lottery Tickets / Services</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">宅配便や公共料金の支払い受付はできますか？</div>
+      <div class="hiragana">たくはいびんやこうきょうりょうきんのしはらいうけつけはできますか？</div>
+      <div class="english">Can you handle parcel delivery and utility bill payment reception?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">研修で教えていただければ、しっかり覚えて対応します。</div>
+          <div class="hiragana">けんしゅうでおしえていただければ、しっかりおぼえてたいおうします。</div>
+          <div class="english">If I am taught during training, I will learn it properly and handle it.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Japanese convenience stores offer many services: 宅配便（たくはいびん）courier, 公共料金（こうきょうりょうきん）utility bills, ATM, コピー機（こぴーき）copying machine. Show eagerness to learn all of them.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">39</div><div class="label">Night Closing / Opening Duties</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">開店・閉店作業もできますか？</div>
+      <div class="hiragana">かいてん・へいてんさぎょうもできますか？</div>
+      <div class="english">Can you also do opening and closing duties?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">はい、手順さえ教えていただければ対応できます。</div>
+          <div class="hiragana">はい、てじゅんさえおしえていただければたいおうできます。</div>
+          <div class="english">Yes, as long as I am shown the procedure, I can handle it.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     12. ON-THE-JOB PHRASES
+═════════════════════════════════════════════ -->
+<section id="phrases">
+  <div class="section-title"><span class="icon">💬</span> 12. Essential On-the-Job Phrases｜現場でよく使う言葉</div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">40</div><div class="label">Greeting Customers</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お客様が入ってきたときは何と言いますか？</div>
+      <div class="hiragana">おきゃくさまがはいってきたときはなんといいますか？</div>
+      <div class="english">What do you say when a customer enters?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Correct Phrase to Use</div>
+        <div class="answer-item">
+          <div class="jp-sentence">いらっしゃいませ！</div>
+          <div class="hiragana">いらっしゃいませ！</div>
+          <div class="english">Welcome! (standard store greeting — always say this clearly)</div>
+        </div>
+      </div>
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Dialect Notes</div>
+        <div class="dialect-item">
+          <div class="answer-label">Some Kansai stores say:</div>
+          <div class="jp-sentence">おいでやす！（Kyoto style）</div>
+          <div class="hiragana">おいでやす！</div>
+          <div class="english">Welcome! (Kyoto traditional greeting — very warm and local)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">41</div><div class="label">At the Cashier — Bag / Receipt</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">レジでお客様に何と声をかけますか？</div>
+      <div class="hiragana">れじでおきゃくさまになんとこえをかけますか？</div>
+      <div class="english">What do you say to customers at the register?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Key Cashier Phrases</div>
+        <div class="answer-item">
+          <div class="jp-sentence">袋はご入用ですか？</div>
+          <div class="hiragana">ふくろはごにゅうようですか？</div>
+          <div class="english">Would you like a bag?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">ポイントカードはお持ちですか？</div>
+          <div class="hiragana">ぽいんとかーどはおもちですか？</div>
+          <div class="english">Do you have a point card?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇〇円のお買い上げです。</div>
+          <div class="hiragana">〇〇えんのおかいあげです。</div>
+          <div class="english">Your total is 〇〇 yen.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇〇円のお返しです。ありがとうございました。</div>
+          <div class="hiragana">〇〇えんのおかえしです。ありがとうございました。</div>
+          <div class="english">Here is your 〇〇 yen change. Thank you very much.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">温めますか？</div>
+          <div class="hiragana">あたためますか？</div>
+          <div class="english">Would you like this warmed up?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">レシートはご入用ですか？</div>
+          <div class="hiragana">れしーとはごにゅうようですか？</div>
+          <div class="english">Would you like a receipt?</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> These phrases are said the same way every time at every store. Practice until they feel natural — speed and confidence matter more than perfection.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">42</div><div class="label">Asking a Customer to Wait</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お客様に少し待ってもらうときは？</div>
+      <div class="hiragana">おきゃくさまにすこしまってもらうときは？</div>
+      <div class="english">What do you say when you need the customer to wait a moment?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Phrases to Use</div>
+        <div class="answer-item">
+          <div class="jp-sentence">少々お待ちください。</div>
+          <div class="hiragana">しょうしょうおまちください。</div>
+          <div class="english">Please wait a moment. (formal)</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">ただいま確認いたします。</div>
+          <div class="hiragana">ただいまかくにんいたします。</div>
+          <div class="english">I will check on that right now.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">43</div><div class="label">Apologising to a Customer</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お客様にお詫びするときは？</div>
+      <div class="hiragana">おきゃくさまにおわびするときは？</div>
+      <div class="english">What do you say to apologise to a customer?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Phrases to Use</div>
+        <div class="answer-item">
+          <div class="jp-sentence">申し訳ございません。</div>
+          <div class="hiragana">もうしわけございません。</div>
+          <div class="english">I am very sorry. (most formal apology)</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">大変ご不便をおかけしました。</div>
+          <div class="hiragana">たいへんごふべんをおかけしました。</div>
+          <div class="english">We have caused you great inconvenience.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">44</div><div class="label">Asking a Colleague for Help</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">わからないことがあったとき、どうしますか？</div>
+      <div class="hiragana">わからないことがあったとき、どうしますか？</div>
+      <div class="english">What do you do when you don't understand something?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Phrases to Say to Colleagues</div>
+        <div class="answer-item">
+          <div class="jp-sentence">すみません、教えていただけますか？</div>
+          <div class="hiragana">すみません、おしえていただけますか？</div>
+          <div class="english">Excuse me, could you please teach me?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">確認してもよろしいですか？</div>
+          <div class="hiragana">かくにんしてもよろしいですか？</div>
+          <div class="english">May I double-check this?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">わからないことはすぐに先輩に聞くようにします。</div>
+          <div class="hiragana">わからないことはすぐにせんぱいにきくようにします。</div>
+          <div class="english">If I don't understand something, I will ask a senior colleague right away.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">45</div><div class="label">Shift Handover</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">シフト交代のときは何と言いますか？</div>
+      <div class="hiragana">しふとこうたいのときはなんといいますか？</div>
+      <div class="english">What do you say at shift handover?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Common Handover Phrases</div>
+        <div class="answer-item">
+          <div class="jp-sentence">お疲れ様でした。（leaving）</div>
+          <div class="hiragana">おつかれさまでした。</div>
+          <div class="english">Thank you for your hard work. (said to someone finishing their shift)</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">よろしくお願いします。（arriving）</div>
+          <div class="hiragana">よろしくおねがいします。</div>
+          <div class="english">Please take care of things / I'm counting on you. (said when starting shift)</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">引き継ぎ事項はありますか？</div>
+          <div class="hiragana">ひきつぎじこうはありますか？</div>
+          <div class="english">Are there any items to hand over / pass on?</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     13. HANDLING DIFFICULT SITUATIONS
+═════════════════════════════════════════════ -->
+<section id="difficult">
+  <div class="section-title"><span class="icon">⚠️</span> 13. Handling Difficult Situations｜困った場面への対応</div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">46</div><div class="label">Customer Complains</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お客様からクレームがあった場合、どう対応しますか？</div>
+      <div class="hiragana">おきゃくさまからくれーむがあったばあい、どうたいおうしますか？</div>
+      <div class="english">How would you handle a complaint from a customer?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answers</div>
+        <div class="answer-item">
+          <div class="jp-sentence">まず落ち着いてお話を聞き、「申し訳ございません」とお詫びします。解決できない場合はすぐに店長を呼びます。</div>
+          <div class="hiragana">まずおちついておはなしをきき、「もうしわけございません」とおわびします。かいけつできないばあいはすぐにてんちょうをよびます。</div>
+          <div class="english">First I calmly listen, then apologise saying "I am very sorry." If I cannot resolve it, I immediately call the store manager.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Never argue with a customer. The key Japanese rule is: listen first, apologise second, escalate if needed.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">47</div><div class="label">You Don't Understand What a Customer Says</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お客様の言葉が聞き取れなかったときは？</div>
+      <div class="hiragana">おきゃくさまのことばがききとれなかったときは？</div>
+      <div class="english">What do you do if you cannot understand what a customer is saying?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Phrases to Use</div>
+        <div class="answer-item">
+          <div class="jp-sentence">恐れ入りますが、もう一度おっしゃっていただけますか？</div>
+          <div class="hiragana">おそれいりますが、もういちどおっしゃっていただけますか？</div>
+          <div class="english">I'm sorry to trouble you, but could you please say that one more time?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">すみません、少しゆっくり話していただけますか？</div>
+          <div class="hiragana">すみません、すこしゆっくりはなしていただけますか？</div>
+          <div class="english">Excuse me, could you please speak a little more slowly?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">少々お待ちください。担当の者を呼んでまいります。</div>
+          <div class="hiragana">しょうしょうおまちください。たんとうのものをよんでまいります。</div>
+          <div class="english">Please wait a moment. I will call the person in charge.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">48</div><div class="label">Shoplifting / Suspicious Person</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">万引きが疑われる場合はどうしますか？</div>
+      <div class="hiragana">まんびきがうたがわれるばあいはどうしますか？</div>
+      <div class="english">What do you do if you suspect shoplifting?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">自分では声をかけず、すぐに店長や先輩スタッフに報告します。</div>
+          <div class="hiragana">じぶんではこえをかけず、すぐにてんちょうやせんぱいすたっふにほうこくします。</div>
+          <div class="english">I would not approach them myself, but immediately report to the store manager or senior staff.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> This is the correct answer — never confront a suspected shoplifter yourself. Reporting to a superior is the safe and proper procedure.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">49</div><div class="label">You Make a Mistake at the Register</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">レジで間違えてしまったらどうしますか？</div>
+      <div class="hiragana">れじでまちがえてしまったらどうしますか？</div>
+      <div class="english">What would you do if you made a mistake at the cash register?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">まずお客様にお詫びし、すぐに上の方に報告して正しい対応をとります。</div>
+          <div class="hiragana">まずおきゃくさまにおわびし、すぐにうえのかたにほうこくしてただしいたいおうをとります。</div>
+          <div class="english">First I apologise to the customer, then immediately report to a senior staff member and take the correct action.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">50</div><div class="label">Calling in Sick / Absence</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">体調が悪くて出勤できない場合はどうしますか？</div>
+      <div class="hiragana">たいちょうがわるくてしゅっきんできないばあいはどうしますか？</div>
+      <div class="english">What do you do if you feel unwell and cannot come to work?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer + What to Say</div>
+        <div class="answer-item">
+          <div class="jp-sentence">できるだけ早めに店長に連絡します。</div>
+          <div class="hiragana">できるだけはやめにてんちょうにれんらくします。</div>
+          <div class="english">I will contact the store manager as early as possible.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">申し訳ありませんが、本日体調が優れず、出勤が難しい状況です。</div>
+          <div class="hiragana">もうしわけありませんが、ほんじつたいちょうがすぐれず、しゅっきんがむずかしいじょうきょうです。</div>
+          <div class="english">I'm very sorry, but I am not feeling well today and it is difficult for me to come in.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Always call — never send a text message only. Calling is the expected and respectful way to report an absence in Japan.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">51</div><div class="label">Age Verification for Alcohol / Tobacco</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お酒やタバコを買おうとしているお客様が未成年に見えた場合は？</div>
+      <div class="hiragana">おさけやたばこをかおうとしているおきゃくさまがみせいねんにみえたばあいは？</div>
+      <div class="english">What if a customer buying alcohol or tobacco looks underage?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Correct Phrase + Action</div>
+        <div class="answer-item">
+          <div class="jp-sentence">恐れ入りますが、年齢確認をさせていただいてもよろしいでしょうか？</div>
+          <div class="hiragana">おそれいりますが、ねんれいかくにんをさせていただいてもよろしいでしょうか？</div>
+          <div class="english">I'm sorry to trouble you, but may I check your age?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">身分証明書をご提示いただけますか？</div>
+          <div class="hiragana">みぶんしょうめいしょをごていじいただけますか？</div>
+          <div class="english">Could you please show me your ID?</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> In Japan, alcohol and tobacco cannot be sold to anyone under 20. Most registers have a touchscreen where the customer confirms their age — but if in doubt, always ask for ID.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">52</div><div class="label">Fire / Emergency Procedure</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">緊急時の対応はどうすれば良いですか？</div>
+      <div class="hiragana">きんきゅうじのたいおうはどうすればよいですか？</div>
+      <div class="english">What should you do in an emergency situation?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Answer</div>
+        <div class="answer-item">
+          <div class="jp-sentence">お客様の安全を第一にし、すぐに店長に報告して指示に従います。</div>
+          <div class="hiragana">おきゃくさまのあんぜんをだいいちにし、すぐにてんちょうにほうこくしてしじにしたがいます。</div>
+          <div class="english">I put customer safety first, immediately report to the store manager, and follow their instructions.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     14. INTERVIEW MANNERS & ETIQUETTE
+═════════════════════════════════════════════ -->
+<section id="etiquette">
+  <div class="section-title"><span class="icon">👔</span> 14. Interview Manners &amp; Etiquette｜面接マナー</div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">53</div><div class="label">Entering the Interview Room</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">面接室に入るときは何と言いますか？</div>
+      <div class="hiragana">めんせつしつにはいるときはなんといいますか？</div>
+      <div class="english">What do you say when entering the interview room?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Step-by-Step</div>
+        <div class="answer-item">
+          <div class="jp-sentence">① ドアを3回ノックする。</div>
+          <div class="hiragana">① どあを3かいのっくする。</div>
+          <div class="english">① Knock on the door 3 times.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">② 「どうぞ」と言われたら「失礼します」と言いながら入る。</div>
+          <div class="hiragana">② 「どうぞ」といわれたら「しつれいします」といいながらはいる。</div>
+          <div class="english">② When told "please come in," enter while saying "Excuse me / Pardon the intrusion."</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">③ 椅子の前に立ち、名前を言ってから座る。</div>
+          <div class="hiragana">③ いすのまえにたち、なまえをいってからすわる。</div>
+          <div class="english">③ Stand in front of the chair, say your name, then sit down.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">54</div><div class="label">What to Wear</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">面接にはどんな服装で行けばいいですか？</div>
+      <div class="hiragana">めんせつにはどんなふくそうでいけばいいですか？</div>
+      <div class="english">What should you wear to the interview?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ What to Know</div>
+        <div class="answer-item">
+          <div class="jp-sentence">清潔感のある服装（スーツや落ち着いた色の服）で行くのが一般的です。</div>
+          <div class="hiragana">せいけつかんのあるふくそう（すーつやおちついたいろのふく）でいくのがいっぱんてきです。</div>
+          <div class="english">It is generally expected to wear clean, neat clothing (suit or calm-coloured clothes).</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">派手な色や露出の多い服装は避けましょう。</div>
+          <div class="hiragana">はでないろやろしゅつのおおいふくそうはさけましょう。</div>
+          <div class="english">Avoid flashy colours or revealing clothing.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Even for a part-time convenience store job, arriving in neat, modest clothing makes a very good first impression in Japan.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">55</div><div class="label">Punctuality</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">面接には何分前に到着すればいいですか？</div>
+      <div class="hiragana">めんせつにはなんぷんまえにとうちゃくすればいいですか？</div>
+      <div class="english">How many minutes early should you arrive for the interview?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ What to Know</div>
+        <div class="answer-item">
+          <div class="jp-sentence">5〜10分前に到着するのが理想的です。</div>
+          <div class="hiragana">5〜10ぷんまえにとうちゃくするのがりそうてきです。</div>
+          <div class="english">Arriving 5–10 minutes early is ideal.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">遅刻しそうな場合は必ず事前に電話で連絡してください。</div>
+          <div class="hiragana">ちこくしそうなばあいはかならずじぜんにでんわでれんらくしてください。</div>
+          <div class="english">If you might be late, always call in advance to let them know.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Being late without calling is considered very disrespectful in Japan and will almost certainly cost you the job.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">56</div><div class="label">What to Bring</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">面接に持参するものは何ですか？</div>
+      <div class="hiragana">めんせつにじさんするものはなんですか？</div>
+      <div class="english">What should you bring to the interview?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Checklist</div>
+        <div class="answer-item">
+          <div class="jp-sentence">在留カード（ざいりゅうかーど）— Residence Card</div>
+          <div class="hiragana">ざいりゅうかーど</div>
+          <div class="english">Residence Card — always required for foreign nationals</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">筆記用具（ひっきようぐ）— Pen &amp; Notepad</div>
+          <div class="hiragana">ひっきようぐ</div>
+          <div class="english">Pen and notepad — to write down important information</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">印鑑（いんかん）— Personal Seal (if required)</div>
+          <div class="hiragana">いんかん</div>
+          <div class="english">Personal stamp seal — sometimes needed for contract signing</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">履歴書（りれきしょ）— Resume / CV</div>
+          <div class="hiragana">りれきしょ</div>
+          <div class="english">Japanese-format resume — bring 2 copies, handwritten or printed</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">57</div><div class="label">Bowing Etiquette</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">お辞儀はどのくらいの角度でしますか？</div>
+      <div class="hiragana">おじぎはどのくらいのかくどでしますか？</div>
+      <div class="english">What angle should you bow at?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Bow Guide</div>
+        <div class="answer-item">
+          <div class="jp-sentence">会釈（えしゃく）：約15度 — 通路で人とすれ違うとき</div>
+          <div class="hiragana">えしゃく：やく15ど — つうろでひととすれちがうとき</div>
+          <div class="english">Light bow ~15°: when passing someone in a corridor</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">敬礼（けいれい）：約30度 — 面接の挨拶・お礼</div>
+          <div class="hiragana">けいれい：やく30ど — めんせつのあいさつ・おれい</div>
+          <div class="english">Standard bow ~30°: greeting and thanking at interviews</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">最敬礼（さいけいれい）：約45度 — 深いお詫びや感謝</div>
+          <div class="hiragana">さいけいれい：やく45ど — ふかいおわびやかんしゃ</div>
+          <div class="english">Deep bow ~45°: deep apology or sincere gratitude</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     15. AFTER THE INTERVIEW
+═════════════════════════════════════════════ -->
+<section id="afterinterview">
+  <div class="section-title"><span class="icon">📬</span> 15. After the Interview｜面接の後</div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">58</div><div class="label">When Will You Hear Back?</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">採用結果はいつ頃わかりますか？</div>
+      <div class="hiragana">さいようけっかはいつごろわかりますか？</div>
+      <div class="english">When will I find out the result of the hiring decision?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ What you may hear</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇日以内にお電話いたします。</div>
+          <div class="hiragana">〇にちいないにおでんわいたします。</div>
+          <div class="english">We will call you within 〇 days.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">後日、メールでご連絡いたします。</div>
+          <div class="hiragana">ごじつ、めーるでごれんらくいたします。</div>
+          <div class="english">We will contact you by email at a later date.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">59</div><div class="label">Following Up After the Interview</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">面接後に連絡するとき何と言いますか？</div>
+      <div class="hiragana">めんせつごにれんらくするときなんといいますか？</div>
+      <div class="english">What do you say when following up after the interview?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Phone / Message Script</div>
+        <div class="answer-item">
+          <div class="jp-sentence">先日面接していただいた〇〇と申します。採用結果についてお伺いしたく、ご連絡いたしました。</div>
+          <div class="hiragana">せんじつめんせつしていただいた〇〇ともうします。さいようけっかについておうかがいしたく、ごれんらくいたしました。</div>
+          <div class="english">My name is 〇〇; I had an interview with you the other day. I am contacting you to enquire about the hiring result.</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> Wait until after the date they told you before following up. Calling too early can seem impatient. Calling at the right time shows enthusiasm.</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">60</div><div class="label">Accepting the Job Offer</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">採用の電話を受けたときは何と言いますか？</div>
+      <div class="hiragana">さいようのでんわをうけたときはなんといいますか？</div>
+      <div class="english">What do you say when you receive the job offer call?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Reply</div>
+        <div class="answer-item">
+          <div class="jp-sentence">ありがとうございます！ぜひよろしくお願いいたします。精一杯頑張ります。</div>
+          <div class="hiragana">ありがとうございます！ぜひよろしくおねがいいたします。せいいっぱいがんばります。</div>
+          <div class="english">Thank you very much! I am very pleased to accept. I will do my very best.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">61</div><div class="label">Declining a Job Offer Politely</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">採用をお断りするときは何と言いますか？</div>
+      <div class="hiragana">さいようをおことわりするときはなんといいますか？</div>
+      <div class="english">What do you say when politely declining a job offer?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Polite Decline Phrase</div>
+        <div class="answer-item">
+          <div class="jp-sentence">この度はお声がけいただきありがとうございました。誠に恐縮ですが、今回はご辞退させていただきたく思います。大変申し訳ございません。</div>
+          <div class="hiragana">このたびはおこえがけいただきありがとうございました。まことにきょうしゅくですが、こんかいはごじたいさせていただきたくおもいます。たいへんもうしわけございません。</div>
+          <div class="english">Thank you very much for the offer. I am truly sorry, but I would like to respectfully decline this time. I sincerely apologise.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">62</div><div class="label">First Day Greeting</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">初日に出勤したとき、何と挨拶しますか？</div>
+      <div class="hiragana">しょにちにしゅっきんしたとき、なんとあいさつしますか？</div>
+      <div class="english">What do you say as a greeting on your first day at work?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ First-Day Phrases</div>
+        <div class="answer-item">
+          <div class="jp-sentence">本日からお世話になります。〇〇と申します。どうぞよろしくお願いいたします。</div>
+          <div class="hiragana">ほんじつからおせわになります。〇〇ともうします。どうぞよろしくおねがいいたします。</div>
+          <div class="english">Starting from today, I am in your care. My name is 〇〇. Please take good care of me.</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">わからないことがあったら教えてください。一生懸命頑張ります。</div>
+          <div class="hiragana">わからないことがあったらおしえてください。いっしょうけんめいがんばります。</div>
+          <div class="english">Please teach me anything I don't understand. I will work very hard.</div>
+        </div>
+      </div>
+      <div class="dialect-block">
+        <div class="dialect-title">🗣️ Kansai First-Day Variation</div>
+        <div class="dialect-item">
+          <div class="jp-sentence">今日からよろしくお願いします。何でも教えてくださいね！</div>
+          <div class="hiragana">きょうからよろしくおねがいします。なんでもおしえてくださいね！</div>
+          <div class="english">Please take care of me from today. Please teach me anything! (warmer, Kansai-friendly style)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">63</div><div class="label">Asking to Change or Swap a Shift</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">シフトを変えてもらいたいときはどう言いますか？</div>
+      <div class="hiragana">しふとをかえてもらいたいときはどういいますか？</div>
+      <div class="english">How do you ask to change or swap a shift?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Phrases</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇月〇日のシフトについてご相談があるのですが、よろしいでしょうか？</div>
+          <div class="hiragana">〇がつ〇にちのしふとについてごそうだんがあるのですが、よろしいでしょうか？</div>
+          <div class="english">I'd like to consult you about my shift on (date) — is that okay?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">急で申し訳ないのですが、〇日のシフトを代わっていただける方を探しています。</div>
+          <div class="hiragana">きゅうでもうしわけないのですが、〇にちのしふとをかわっていただけるかたをさがしています。</div>
+          <div class="english">I'm sorry for the short notice, but I'm looking for someone to swap my shift on the 〇th.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">64</div><div class="label">Asking for a Day Off</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">休みを取りたいときはどう伝えますか？</div>
+      <div class="hiragana">やすみをとりたいときはどうつたえますか？</div>
+      <div class="english">How do you tell them you need a day off?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Phrases</div>
+        <div class="answer-item">
+          <div class="jp-sentence">〇月〇日にどうしても外せない用事があり、休みをいただけますでしょうか？</div>
+          <div class="hiragana">〇がつ〇にちにどうしてもはずせないようじがあり、やすみをいただけますでしょうか？</div>
+          <div class="english">I have an unavoidable commitment on (date) — would it be possible to take that day off?</div>
+        </div>
+        <div class="answer-item">
+          <div class="jp-sentence">できるだけ早めにシフトの希望をお伝えするようにします。</div>
+          <div class="hiragana">できるだけはやめにしふとのきぼうをおつたえするようにします。</div>
+          <div class="english">I will try to let you know my shift preferences as early as possible.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header"><div class="num">65</div><div class="label">Resigning / Leaving the Job</div></div>
+    <div class="qa-block">
+      <div class="jp-sentence">仕事を辞めたいときはどう伝えますか？</div>
+      <div class="hiragana">しごとをやめたいときはどうつたえますか？</div>
+      <div class="english">How do you tell them you want to quit the job?</div>
+      <div class="answer-wrap">
+        <div class="answer-label">✅ Sample Phrase (give at least 1 month notice)</div>
+        <div class="answer-item">
+          <div class="jp-sentence">大変申し上げにくいのですが、〇月末でアルバイトを退職させていただきたいと思っております。</div>
+          <div class="hiragana">たいへんもうしあげにくいのですが、〇がつまつでアルバイトをたいしょくさせていただきたいとおもっております。</div>
+          <div class="english">It is difficult to say, but I would like to leave the part-time job at the end of (month).</div>
+        </div>
+      </div>
+      <div class="tip"><strong>Tip:</strong> In Japan, it is polite to give at least 1 month advance notice (一ヶ月前／いっかげつまえ). Quitting suddenly without notice is considered very rude and can affect your reputation.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     VOCABULARY QUICK-REFERENCE TABLE
+═════════════════════════════════════════════ -->
+<section id="vocab">
+  <div class="section-title"><span class="icon">📚</span> Key Vocabulary Quick Reference｜重要単語</div>
+
+  <div class="card">
+    <div class="qa-block">
+      <table class="vocab-table">
+        <thead>
+          <tr>
+            <th>Japanese</th>
+            <th>Hiragana</th>
+            <th>English</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="jp">アルバイト</td><td class="hira">あるばいと</td><td>Part-time job</td></tr>
+          <tr><td class="jp">シフト</td><td class="hira">しふと</td><td>Work shift</td></tr>
+          <tr><td class="jp">時給</td><td class="hira">じきゅう</td><td>Hourly wage</td></tr>
+          <tr><td class="jp">交通費</td><td class="hira">こうつうひ</td><td>Transport allowance</td></tr>
+          <tr><td class="jp">試用期間</td><td class="hira">しようきかん</td><td>Trial / probation period</td></tr>
+          <tr><td class="jp">早番</td><td class="hira">はやばん</td><td>Early shift</td></tr>
+          <tr><td class="jp">遅番</td><td class="hira">おそばん</td><td>Late shift</td></tr>
+          <tr><td class="jp">深夜</td><td class="hira">しんや</td><td>Late night</td></tr>
+          <tr><td class="jp">在留カード</td><td class="hira">ざいりゅうかーど</td><td>Residence card</td></tr>
+          <tr><td class="jp">配偶者ビザ</td><td class="hira">はいぐうしゃびざ</td><td>Spouse visa</td></tr>
+          <tr><td class="jp">レジ</td><td class="hira">れじ</td><td>Cash register / checkout</td></tr>
+          <tr><td class="jp">陳列</td><td class="hira">ちんれつ</td><td>Stocking shelves / display</td></tr>
+          <tr><td class="jp">廃棄</td><td class="hira">はいき</td><td>Disposal (expired food)</td></tr>
+          <tr><td class="jp">研修</td><td class="hira">けんしゅう</td><td>Training period</td></tr>
+          <tr><td class="jp">制服</td><td class="hira">せいふく</td><td>Uniform</td></tr>
+          <tr><td class="jp">長期</td><td class="hira">ちょうき</td><td>Long-term</td></tr>
+          <tr><td class="jp">採用</td><td class="hira">さいよう</td><td>Hired / employment</td></tr>
+          <tr><td class="jp">通勤</td><td class="hira">つうきん</td><td>Commuting</td></tr>
+          <tr><td class="jp">自転車</td><td class="hira">じてんしゃ</td><td>Bicycle</td></tr>
+          <tr><td class="jp">接客</td><td class="hira">せっきゃく</td><td>Customer service</td></tr>
+          <tr><td class="jp">いらっしゃいませ</td><td class="hira">いらっしゃいませ</td><td>Welcome (to a store)</td></tr>
+          <tr><td class="jp">ありがとうございます</td><td class="hira">ありがとうございます</td><td>Thank you (polite)</td></tr>
+          <tr><td class="jp">少々お待ちください</td><td class="hira">しょうしょうおまちください</td><td>Please wait a moment</td></tr>
+          <tr><td class="jp">申し訳ございません</td><td class="hira">もうしわけございません</td><td>I am very sorry</td></tr>
+          <tr><td class="jp">かしこまりました</td><td class="hira">かしこまりました</td><td>Understood / Certainly (formal)</td></tr>
+          <tr><td class="jp">袋はご入用ですか？</td><td class="hira">ふくろはごにゅうようですか？</td><td>Would you like a bag?</td></tr>
+          <tr><td class="jp">ポイントカードはお持ちですか？</td><td class="hira">ぽいんとかーどはおもちですか？</td><td>Do you have a point card?</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Polite levels reference -->
+  <div class="card" style="margin-top:1rem">
+    <div class="card-header">
+      <div class="num" style="background:var(--secondary)">★</div>
+      <div class="label">Politeness Level Reference</div>
+    </div>
+    <div class="qa-block">
+      <p style="font-size:.85rem; color:var(--muted); margin-bottom:.7rem">Use these patterns when you are unsure how formal to be:</p>
+      <div class="levels">
+        <div class="level-item">
+          <div class="level-badge level-formal">Formal</div>
+          <div>
+            <div class="jp-sentence" style="font-size:.95rem">〜でございます／〜いたします</div>
+            <div class="hiragana">〜でございます／〜いたします</div>
+            <div class="english">Use in interviews and with customers always</div>
+          </div>
+        </div>
+        <div class="level-item">
+          <div class="level-badge level-normal">Normal</div>
+          <div>
+            <div class="jp-sentence" style="font-size:.95rem">〜です／〜ます</div>
+            <div class="hiragana">〜です／〜ます</div>
+            <div class="english">Standard polite — safe with colleagues / managers</div>
+          </div>
+        </div>
+        <div class="level-item">
+          <div class="level-badge level-casual">Casual</div>
+          <div>
+            <div class="jp-sentence" style="font-size:.95rem">〜だ／〜だよ／〜やで（Kansai）</div>
+            <div class="hiragana">〜だ／〜だよ／〜やで（かんさい）</div>
+            <div class="english">Only with close colleagues — never with customers or in interviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+═════════════════════════════════════════════ -->
+<footer>
+  <p>🇯🇵 コンビニ アルバイト 面接ガイド — Convenience Store Part-Time Interview Guide</p>
+  <p style="margin-top:.4rem">Good luck with your interview! 面接、頑張ってください！（めんせつ、がんばってください！）</p>
+</footer>
+
+</body>
+</html>
