@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>レストラン・飲食店 アルバイト 面接ガイド | Restaurant Part-Time Interview Guide</title>
+  <style>
+    :root {
+      --bg: #f9f5f0;
+      --text: #1a202c;
+      --muted: #718096;
+      --border: #e8ddd0;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 24px rgba(0,0,0,.08);
+      --accent: #c0392b;
+      --accent2: #e67e22;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Hiragino Kaku Gothic ProN", "Meiryo", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(135deg, #7b1d1d 0%, #c0392b 50%, #e67e22 100%);
+      color: white;
+      padding: 4rem 1.5rem 3.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    .hero-flag { font-size: 3.5rem; margin-bottom: 1rem; position: relative; }
+    .hero h1 {
+      font-size: 2.1rem; font-weight: 800; letter-spacing: .02em;
+      margin-bottom: .5rem; position: relative;
+    }
+    .hero h1 span {
+      display: block; font-size: 1rem; font-weight: 400;
+      opacity: .85; margin-top: .4rem;
+    }
+    .hero p { font-size: .93rem; opacity: .78; max-width: 580px; margin: .8rem auto 0; position: relative; }
+    .hero-badges {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      justify-content: center; margin-top: 1.5rem; position: relative;
+    }
+    .badge {
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.25);
+      color: white; font-size: .77rem; font-weight: 600;
+      padding: .28rem .85rem; border-radius: 20px; letter-spacing: .04em;
+    }
+    .back-link {
+      position: relative;
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(255,255,255,.15); border: 1px solid rgba(255,255,255,.3);
+      color: white; text-decoration: none; font-size: .82rem; font-weight: 600;
+      padding: .45rem 1rem; border-radius: 30px; margin-bottom: 1.5rem;
+      transition: background .18s;
+    }
+    .back-link:hover { background: rgba(255,255,255,.25); }
+
+    /* ── Layout ── */
+    main { max-width: 980px; margin: 0 auto; padding: 1.5rem .75rem 5rem; }
+
+    /* ── Section Headers ── */
+    .section-header {
+      display: flex; align-items: center; gap: .8rem;
+      background: linear-gradient(135deg, #c0392b, #e67e22);
+      color: white; padding: .9rem 1.4rem;
+      border-radius: 12px; margin: 2.5rem 0 1.2rem;
+      font-size: 1.05rem; font-weight: 800;
+    }
+    .section-header .s-icon { font-size: 1.4rem; }
+    .section-header .s-sub {
+      font-size: .78rem; font-weight: 400; opacity: .88; margin-left: .3rem;
+    }
+
+    /* ── Q&A Cards ── */
+    .qa-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+    }
+
+    /* Question Row */
+    .q-row {
+      padding: 1rem 1.4rem .7rem;
+      border-left: 5px solid #c0392b;
+    }
+    .q-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: #c0392b; margin-bottom: .35rem;
+    }
+    .q-jp { font-size: 1.22rem; font-weight: 700; color: #c0392b; margin-bottom: .25rem; }
+    .q-hira { font-size: .83rem; color: #1565c0; margin-bottom: .2rem; }
+    .q-en { font-size: .82rem; color: #555; }
+
+    /* Answer Row */
+    .a-row {
+      padding: .85rem 1.4rem 1rem;
+      border-left: 5px solid #43a047;
+      background: #f6fbf6;
+    }
+    .a-label {
+      font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: #2e7d32; margin-bottom: .35rem;
+    }
+    .a-jp { font-size: 1rem; font-weight: 600; color: #1b5e20; margin-bottom: .2rem; }
+    .a-hira { font-size: .8rem; color: #1565c0; margin-bottom: .15rem; }
+    .a-en { font-size: .8rem; color: #555; }
+
+    /* Dialect block */
+    .dialect-block {
+      padding: .75rem 1.4rem .85rem;
+      border-left: 5px solid #f9a825;
+      background: #fffde7;
+    }
+    .dialect-label {
+      font-size: .67rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: #f57f17; margin-bottom: .3rem;
+    }
+    .dialect-jp { font-size: .9rem; font-weight: 600; color: #7b4b00; margin-bottom: .15rem; }
+    .dialect-en { font-size: .78rem; color: #7b4b00; }
+
+    /* Tip block */
+    .tip-block {
+      padding: .75rem 1.4rem .85rem;
+      border-left: 5px solid #7b1fa2;
+      background: #f8f0ff;
+    }
+    .tip-label {
+      font-size: .67rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: #6a1b9a; margin-bottom: .3rem;
+    }
+    .tip-text { font-size: .82rem; color: #4a148c; line-height: 1.6; }
+
+    /* Note block */
+    .note-block {
+      padding: .75rem 1.4rem .85rem;
+      border-left: 5px solid #0288d1;
+      background: #e1f5fe;
+    }
+    .note-label {
+      font-size: .67rem; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: #01579b; margin-bottom: .3rem;
+    }
+    .note-text { font-size: .82rem; color: #01579b; line-height: 1.6; }
+
+    /* ── Chain Info Box ── */
+    .chain-box {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .chain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: .8rem;
+    }
+    .chain-item {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; gap: .3rem;
+      background: var(--bg); border-radius: 10px;
+      padding: .8rem .6rem;
+      border: 1px solid var(--border);
+    }
+    .chain-icon { font-size: 2rem; }
+    .chain-name { font-size: .8rem; font-weight: 700; color: var(--text); }
+    .chain-type { font-size: .7rem; color: var(--muted); }
+
+    /* ── Vocab Table ── */
+    .vocab-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .vocab-section {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 14px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .vocab-section h3 {
+      font-size: 1rem; font-weight: 800; margin-bottom: 1.2rem;
+      color: var(--text);
+    }
+    .vocab-table { width: 100%; min-width: 480px; border-collapse: collapse; }
+    .vocab-table th {
+      text-align: left; font-size: .73rem; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      color: var(--muted); padding: .5rem .8rem;
+      border-bottom: 2px solid var(--border);
+    }
+    .vocab-table td {
+      padding: .55rem .8rem; font-size: .84rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .vocab-table tr:last-child td { border-bottom: none; }
+    .vocab-table tr:nth-child(even) td { background: var(--bg); }
+    .vocab-jp { font-weight: 700; color: #c0392b; }
+    .vocab-hira { color: #1565c0; font-size: .78rem; }
+    .vocab-en { color: #555; }
+
+    /* ── Legend ── */
+    .legend-strip {
+      background: var(--card-bg);
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+    }
+    .legend-strip h4 {
+      font-size: .78rem; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: .75rem;
+    }
+    .legend-row { display: flex; flex-wrap: wrap; gap: .7rem 1.4rem; }
+    .legend-item { display: flex; align-items: center; gap: .4rem; font-size: .79rem; }
+    .legend-dot { width: 13px; height: 13px; border-radius: 3px; flex-shrink: 0; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: .8rem; color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    footer p + p { margin-top: .35rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .hero { padding: 2.5rem 1rem 2rem; }
+      .hero h1 { font-size: 1.4rem; }
+      .hero h1 span { font-size: .88rem; }
+      .hero-flag { font-size: 2.8rem; }
+      .section-header { font-size: .92rem; padding: .7rem 1rem; }
+      .q-jp { font-size: 1.05rem; }
+      .q-row, .a-row, .dialect-block, .tip-block, .note-block {
+        padding-left: 1rem; padding-right: 1rem;
+      }
+      .chain-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════ HERO ════════ -->
+<div class="hero">
+  <a href="index.html" class="back-link">← Back to All Guides</a>
+  <div class="hero-flag">🍜</div>
+  <h1>レストラン・飲食店 アルバイト面接ガイド
+    <span>Restaurant &amp; Fast-Food Part-Time Interview Guide</span>
+  </h1>
+  <p>Complete bilingual Q&amp;A for Sukiya, McDonald's, Guukaku, Yoshinoya, MOS Burger, Saizeriya, and other Japanese restaurant chains.</p>
+  <div class="hero-badges">
+    <span class="badge">🍔 Fast Food</span>
+    <span class="badge">🥩 Yakiniku</span>
+    <span class="badge">🍛 Gyudon</span>
+    <span class="badge">🗣️ Japanese + Hiragana</span>
+    <span class="badge">🌏 English Translation</span>
+    <span class="badge">📍 Dialect Variations</span>
+    <span class="badge">💡 Tips &amp; Etiquette</span>
+  </div>
+</div>
+
+<!-- ════════ MAIN ════════ -->
+<main>
+
+  <!-- Chain Overview -->
+  <div class="chain-box">
+    <p style="font-size:.85rem;color:var(--muted);margin-bottom:1rem;">This guide covers interviews at popular Japanese restaurant &amp; fast-food chains:</p>
+    <div class="chain-grid">
+      <div class="chain-item">
+        <div class="chain-icon">🍚</div>
+        <div class="chain-name">スキヤ<br>Sukiya</div>
+        <div class="chain-type">Gyudon / Beef Bowl</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🍔</div>
+        <div class="chain-name">マクドナルド<br>McDonald's</div>
+        <div class="chain-type">Fast Food</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🥩</div>
+        <div class="chain-name">牛角 / 雅叙苑<br>Guukaku</div>
+        <div class="chain-type">Yakiniku BBQ</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🥗</div>
+        <div class="chain-name">サイゼリヤ<br>Saizeriya</div>
+        <div class="chain-type">Italian Family</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🍚</div>
+        <div class="chain-name">吉野家<br>Yoshinoya</div>
+        <div class="chain-type">Gyudon / Fast Food</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🍔</div>
+        <div class="chain-name">モスバーガー<br>MOS Burger</div>
+        <div class="chain-type">Japanese Burger</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🍜</div>
+        <div class="chain-name">ガスト<br>Gusto</div>
+        <div class="chain-type">Family Restaurant</div>
+      </div>
+      <div class="chain-item">
+        <div class="chain-icon">🍣</div>
+        <div class="chain-name">くら寿司<br>Kurazushi</div>
+        <div class="chain-type">Conveyor Belt Sushi</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend-strip">
+    <h4>Colour Legend</h4>
+    <div class="legend-row">
+      <div class="legend-item"><div class="legend-dot" style="background:#c0392b"></div> Interviewer question (Japanese)</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#1565c0"></div> Hiragana reading</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#555"></div> English meaning</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#43a047"></div> Sample answer</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#f9a825"></div> Dialect / regional variation</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#7b1fa2"></div> Cultural tip</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#0288d1"></div> Chain-specific note</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 1 — SELF INTRODUCTION
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">👤</span>
+    <span>Section 1: 自己紹介 <span class="s-sub">じこしょうかい — Self Introduction</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q1 — Interviewer</div>
+      <div class="q-jp">自己紹介をしてください。</div>
+      <div class="q-hira">じこしょうかいをしてください。</div>
+      <div class="q-en">Please introduce yourself.</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はじめまして。〇〇と申します。〇〇から参りました。日本語を勉強しながら、飲食店でアルバイトをしたいと思い、応募しました。明るく、一生懸命働きますので、よろしくお願いします。</div>
+      <div class="a-hira">はじめまして。〇〇ともうします。〇〇からまいりました。にほんごをべんきょうしながら、いんしょくてんでアルバイトをしたいとおもい、おうぼしました。あかるく、いっしょうけんめいはたらきますので、よろしくおねがいします。</div>
+      <div class="a-en">Nice to meet you. My name is 〇〇. I came from 〇〇. I applied because I want to work part-time at a restaurant while studying Japanese. I will work cheerfully and hard, so please take care of me.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Cultural Tip</div>
+      <div class="tip-text">Keep your self-introduction to about 30–60 seconds. Bow at the start and end. Speak clearly and at a moderate pace. Restaurants value energy and a friendly smile — show it!</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q2 — Interviewer</div>
+      <div class="q-jp">なぜ当店を選びましたか？</div>
+      <div class="q-hira">なぜとうてんをえらびましたか？</div>
+      <div class="q-en">Why did you choose our restaurant?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">以前から〇〇（スキヤ／マクドナルド）をよく利用していて、スタッフの方の笑顔や接客がとても印象的でした。自分も同じように、お客様に喜んでいただける仕事がしたいと思い、応募しました。</div>
+      <div class="a-hira">いぜんから〇〇をよくりようしていて、スタッフのかたのえがおやせっきゃくがとてもいんしょうてきでした。じぶんもおなじように、おきゃくさまによろこんでいただけるしごとがしたいとおもい、おうぼしました。</div>
+      <div class="a-en">I have been a regular customer at 〇〇 for a long time and was very impressed by the staff's smiles and service. I applied because I also want to do work that makes customers happy.</div>
+    </div>
+    <div class="note-block">
+      <div class="note-label">Chain-Specific Note</div>
+      <div class="note-text">Replace 〇〇 with the actual chain name — e.g. スキヤ (Sukiya), マクドナルド (McDonald's), 牛角 (Guukaku), 吉野家 (Yoshinoya), etc. Mentioning you are a customer shows genuine interest.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 2 — AVAILABILITY & SHIFT
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">📅</span>
+    <span>Section 2: 勤務可能日・シフト <span class="s-sub">きんむかのうび・シフト — Availability &amp; Shifts</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q3 — Interviewer</div>
+      <div class="q-jp">週に何日、働けますか？</div>
+      <div class="q-hira">しゅうになんにち、はたらけますか？</div>
+      <div class="q-en">How many days a week can you work?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">週3〜4日、働くことができます。平日の夜と、土日はほぼ毎週入ることができます。</div>
+      <div class="a-hira">しゅう3〜4にち、はたらくことができます。へいじつのよると、どにちはほぼまいしゅうはいることができます。</div>
+      <div class="a-en">I can work 3 to 4 days a week. I am available on weekday evenings and almost every weekend.</div>
+    </div>
+    <div class="dialect-block">
+      <div class="dialect-label">Kansai Variation (Osaka / Kyoto)</div>
+      <div class="dialect-jp">週3〜4日、働けます。平日の夜と土日はだいたい入れますわ。</div>
+      <div class="dialect-en">"I can work 3–4 days a week. I can mostly come in weekday evenings and weekends."</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q4 — Interviewer</div>
+      <div class="q-jp">深夜や早朝のシフトに入れますか？</div>
+      <div class="q-hira">しんややそうちょうのシフトにはいれますか？</div>
+      <div class="q-en">Can you do late-night or early-morning shifts?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer A — Yes</div>
+      <div class="a-jp">はい、深夜シフトも可能です。最終電車の時間を確認しましたので、問題ありません。</div>
+      <div class="a-hira">はい、しんやシフトもかのうです。さいしゅうでんしゃのじかんをかくにんしましたので、もんだいありません。</div>
+      <div class="a-en">Yes, late-night shifts are fine. I have checked the last train time, so there is no problem.</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer B — Partial</div>
+      <div class="a-jp">深夜は難しいのですが、早朝6時からは入ることができます。</div>
+      <div class="a-hira">しんやはむずかしいのですが、そうちょう6じからははいることができます。</div>
+      <div class="a-en">Late nights are difficult for me, but I can start from 6 a.m. in the morning.</div>
+    </div>
+    <div class="note-block">
+      <div class="note-label">Chain-Specific Note</div>
+      <div class="note-text">Sukiya (スキヤ) and Yoshinoya (吉野家) are 24-hour chains and often need late-night staff. McDonald's also has 24-hour locations. Being flexible about late-night shifts significantly increases your chances of being hired.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q5 — Interviewer</div>
+      <div class="q-jp">いつから働き始められますか？</div>
+      <div class="q-hira">いつからはたらきはじめられますか？</div>
+      <div class="q-en">When can you start working?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">採用していただければ、来週からでも始めることができます。</div>
+      <div class="a-hira">さいようしていただければ、らいしゅうからでもはじめることができます。</div>
+      <div class="a-en">If I am hired, I can start as early as next week.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 3 — WORK EXPERIENCE
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">💼</span>
+    <span>Section 3: 経験・スキル <span class="s-sub">けいけん・スキル — Experience &amp; Skills</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q6 — Interviewer</div>
+      <div class="q-jp">飲食店での勤務経験はありますか？</div>
+      <div class="q-hira">いんしょくてんでのきんむけいけんはありますか？</div>
+      <div class="q-en">Do you have any experience working in the food and beverage industry?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer A — With Experience</div>
+      <div class="a-jp">はい、母国でファミリーレストランでの接客経験が〇年あります。注文受け、料理の提供、会計など一通り経験しています。</div>
+      <div class="a-hira">はい、ぼこくでファミリーレストランでのせっきゃくけいけんが〇ねんあります。ちゅうもんうけ、りょうりのていきょう、かいけいなどひととおりけいけんしています。</div>
+      <div class="a-en">Yes, I have 〇 years of customer service experience at a family restaurant in my home country. I have experience taking orders, serving food, and handling payments.</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer B — No Experience</div>
+      <div class="a-jp">飲食店での経験はまだありませんが、接客が好きで、人と話すことが得意です。早く仕事を覚えられるよう、一生懸命頑張ります。</div>
+      <div class="a-hira">いんしょくてんでのけいけんはまだありませんが、せっきゃくがすきで、ひととはなすことがとくいです。はやくしごとをおぼえられるよう、いっしょうけんめいがんばります。</div>
+      <div class="a-en">I have no restaurant experience yet, but I enjoy customer service and am good at talking with people. I will work very hard to learn the job quickly.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q7 — Interviewer</div>
+      <div class="q-jp">日本語のレベルはどのくらいですか？</div>
+      <div class="q-hira">にほんごのレベルはどのくらいですか？</div>
+      <div class="q-en">What is your level of Japanese?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">日本語能力試験N3レベルです。日常会話は問題なくできます。接客で使う敬語も勉強中ですので、日々上達できると思います。</div>
+      <div class="a-hira">にほんごのうりょくしけんN3レベルです。にちじょうかいわはもんだいなくできます。せっきゃくでつかうけいごもべんきょうちゅうですので、ひびじょうたつできるとおもいます。</div>
+      <div class="a-en">I am at JLPT N3 level. I can handle everyday conversation without problems. I am also studying the formal language (keigo) used in customer service and believe I will improve daily.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Cultural Tip</div>
+      <div class="tip-text">Be honest about your Japanese level. Many chain restaurants like McDonald's and Saizeriya have manuals and training in simple Japanese and actively hire foreign nationals. Enthusiasm to improve counts a lot.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q8 — Interviewer</div>
+      <div class="q-jp">体力には自信がありますか？</div>
+      <div class="q-hira">たいりょくにはじしんがありますか？</div>
+      <div class="q-en">Are you confident in your physical stamina?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、体力には自信があります。〇〇（スポーツなど）をしているので、長時間立ち仕事も問題ありません。</div>
+      <div class="a-hira">はい、たいりょくにはじしんがあります。〇〇をしているので、ちょうじかんたちしごとももんだいありません。</div>
+      <div class="a-en">Yes, I am confident in my stamina. I do 〇〇 (e.g. exercise / sports), so standing for long hours is not a problem.</div>
+    </div>
+    <div class="note-block">
+      <div class="note-label">Note</div>
+      <div class="note-text">Restaurant jobs, especially at busy chains like Guukaku (牛角) during dinner rush, are physically demanding. Showing confidence in your physical endurance is a big plus.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 4 — CUSTOMER SERVICE
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🤝</span>
+    <span>Section 4: 接客・お客様対応 <span class="s-sub">せっきゃく・おきゃくさまたいおう — Customer Service</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q9 — Interviewer</div>
+      <div class="q-jp">お客様に笑顔で接客できますか？</div>
+      <div class="q-hira">おきゃくさまにえがおでせっきゃくできますか？</div>
+      <div class="q-en">Can you serve customers with a smile?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、もちろんです。笑顔は接客の基本だと思っていますので、常に明るく対応します。</div>
+      <div class="a-hira">はい、もちろんです。えがおはせっきゃくのきほんだとおもっていますので、つねにあかるくたいおうします。</div>
+      <div class="a-en">Yes, of course. I believe that a smile is the foundation of good customer service, so I will always respond with a cheerful attitude.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q10 — Interviewer</div>
+      <div class="q-jp">クレームや難しいお客様への対応はどうしますか？</div>
+      <div class="q-hira">クレームやむずかしいおきゃくさまへのたいおうはどうしますか？</div>
+      <div class="q-en">How would you handle a complaint or a difficult customer?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">まず、お客様のお話をしっかりお聞きして、誠実にお詫びします。自分で対応が難しい場合は、すぐに店長やベテランのスタッフに報告して指示をあおぎます。</div>
+      <div class="a-hira">まず、おきゃくさまのおはなしをしっかりおきして、せいじつにおわびします。じぶんでたいおうがむずかしいばあいは、すぐにてんちょうやベテランのスタッフにほうこくしてしじをあおぎます。</div>
+      <div class="a-en">First, I will listen carefully to the customer and sincerely apologize. If I find the situation difficult to handle on my own, I will immediately report to the store manager or senior staff and follow their guidance.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Cultural Tip</div>
+      <div class="tip-text">In Japan, the phrase 「申し訳ございません」(もうしわけございません — "I am terribly sorry") is the standard deep apology in customer-facing situations. Practice this phrase. Never argue with or dismiss a customer.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q11 — Interviewer</div>
+      <div class="q-jp">接客用語（いらっしゃいませ など）を使えますか？</div>
+      <div class="q-hira">せっきゃくようご（いらっしゃいませ など）をつかえますか？</div>
+      <div class="q-en">Can you use customer-service phrases (such as "Irasshaimase")?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">「いらっしゃいませ」「ありがとうございました」「少々お待ちください」などの基本的な接客用語は練習しています。もっと上手になるよう、毎日練習します。</div>
+      <div class="a-hira">「いらっしゃいませ」「ありがとうございました」「しょうしょうおまちください」などのきほんてきなせっきゃくようごはれんしゅうしています。もっとじょうずになるよう、まいにちれんしゅうします。</div>
+      <div class="a-en">I have been practising basic customer-service phrases such as "Irasshaimase," "Arigatou gozaimashita," and "Shoushou omachi kudasai." I will practise every day to get better.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 5 — FOOD HANDLING & HYGIENE
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🧼</span>
+    <span>Section 5: 食品衛生・清潔 <span class="s-sub">しょくひんえいせい・せいけつ — Food Hygiene &amp; Cleanliness</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q12 — Interviewer</div>
+      <div class="q-jp">食品衛生についてどう思いますか？</div>
+      <div class="q-hira">しょくひんえいせいについてどうおもいますか？</div>
+      <div class="q-en">What do you think about food hygiene?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">飲食店ではお客様の健康が最優先だと思います。手洗い、消毒、食材の温度管理など、衛生ルールを必ず守ります。</div>
+      <div class="a-hira">いんしょくてんではおきゃくさまのけんこうがさいゆうせんだとおもいます。てあらい、しょうどく、しょくざいのおんどかんりなど、えいせいルールをかならずまもります。</div>
+      <div class="a-en">I believe the customer's health is the top priority in a restaurant. I will always follow hygiene rules such as handwashing, sanitizing, and temperature management of ingredients.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q13 — Interviewer</div>
+      <div class="q-jp">アレルギーへの対応はできますか？</div>
+      <div class="q-hira">アレルギーへのたいおうはできますか？</div>
+      <div class="q-en">Can you handle food allergy requests?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">アレルギー対応の重要性はよく理解しています。お客様からアレルギーについてお申し出があった場合は、必ずキッチンスタッフや店長に確認し、正確な情報をお伝えします。</div>
+      <div class="a-hira">アレルギーたいおうのじゅうようせいはよくりかいしています。おきゃくさまからアレルギーについておもうしでがあったばあいは、かならずキッチンスタッフやてんちょうにかくにんし、せいかくなじょうほうをおつたえします。</div>
+      <div class="a-en">I fully understand the importance of allergy handling. When a customer informs me of an allergy, I will always confirm with kitchen staff or the manager and give them accurate information.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Cultural Tip</div>
+      <div class="tip-text">Food allergies are taken very seriously in Japan. Never guess about allergens — always escalate to a senior staff member. Showing awareness of this in your interview reflects well on you.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 6 — KITCHEN / COOKING TASKS
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🍳</span>
+    <span>Section 6: キッチン業務 <span class="s-sub">キッチンぎょうむ — Kitchen / Cooking Tasks</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q14 — Interviewer</div>
+      <div class="q-jp">キッチンとホールの、どちらの仕事を希望しますか？</div>
+      <div class="q-hira">キッチンとホールの、どちらのしごとをきぼうしますか？</div>
+      <div class="q-en">Do you prefer kitchen (back-of-house) or hall (front-of-house) work?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer A — Hall</div>
+      <div class="a-jp">ホールの仕事を希望します。お客様と直接関わりながら、接客スキルを磨きたいと思っています。</div>
+      <div class="a-hira">ホールのしごとをきぼうします。おきゃくさまとちょくせつかかわりながら、せっきゃくスキルをみがきたいとおもっています。</div>
+      <div class="a-en">I prefer hall work. I want to improve my customer service skills through direct interaction with customers.</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer B — Either</div>
+      <div class="a-jp">どちらでも対応できます。まずはお店のニーズに合わせて配置していただければ、全力で取り組みます。</div>
+      <div class="a-hira">どちらでもたいおうできます。まずはおみせのニーズにあわせてはいちしていただければ、ぜんりょくでとりくみます。</div>
+      <div class="a-en">I can handle either. Please place me wherever the store needs most, and I will give my full effort.</div>
+    </div>
+    <div class="note-block">
+      <div class="note-label">Chain-Specific Note</div>
+      <div class="note-text">At Guukaku (牛角) and other yakiniku restaurants, hall staff help customers grill meat at the table. At McDonald's and Sukiya, kitchen work is fast-paced and relies on clear manual procedures — both are good options for foreign nationals.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q15 — Interviewer</div>
+      <div class="q-jp">料理はできますか？調理経験はありますか？</div>
+      <div class="q-hira">りょうりはできますか？ちょうりけいけんはありますか？</div>
+      <div class="q-en">Can you cook? Do you have any cooking experience?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">自炊はよくしています。プロとしての調理経験はありませんが、基本的な包丁さばきや火加減は大丈夫です。マニュアルに従って丁寧に作業します。</div>
+      <div class="a-hira">じすいはよくしています。プロとしてのちょうりけいけんはありませんが、きほんてきなほうちょうさばきやひかげんはだいじょうぶです。マニュアルにしたがってていねいにさぎょうします。</div>
+      <div class="a-en">I often cook for myself. I have no professional cooking experience, but I am comfortable with basic knife skills and heat control. I will follow the manual carefully and work with care.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 7 — TEAMWORK
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">👥</span>
+    <span>Section 7: チームワーク <span class="s-sub">チームワーク — Teamwork</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q16 — Interviewer</div>
+      <div class="q-jp">チームで働くことは得意ですか？</div>
+      <div class="q-hira">チームではたらくことはとくいですか？</div>
+      <div class="q-en">Are you good at working as part of a team?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、チームで働くことは得意です。一人で抱え込まず、困ったことがあれば周りのスタッフに声をかけ、助け合いながら仕事を進めたいと思います。</div>
+      <div class="a-hira">はい、チームではたらくことはとくいです。ひとりでかかえこまず、こまったことがあればまわりのスタッフにこえをかけ、たすけあいながらしごとをすすめたいとおもいます。</div>
+      <div class="a-en">Yes, I am good at working as a team. Rather than struggling alone, I will speak up when I need help and cooperate with the team to get work done together.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q17 — Interviewer</div>
+      <div class="q-jp">忙しい時間帯でも冷静に対応できますか？</div>
+      <div class="q-hira">いそがしいじかんたいでもれいせいにたいおうできますか？</div>
+      <div class="q-en">Can you stay calm during busy periods?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、ランチやディナーのピーク時は大変だと思いますが、優先順位をつけてテキパキと動くよう心がけます。落ち着いて、チームと連携しながら対応します。</div>
+      <div class="a-hira">はい、ランチやディナーのピークじはたいへんだとおもいますが、ゆうせんじゅんいをつけてテキパキとうごくようこころがけます。おちついて、チームとれんけいしながらたいおうします。</div>
+      <div class="a-en">Yes, I know it can be tough during lunch and dinner peak hours, but I will try to prioritize tasks and move efficiently. I will stay calm and coordinate with the team.</div>
+    </div>
+    <div class="dialect-block">
+      <div class="dialect-label">Kansai Variation</div>
+      <div class="dialect-jp">忙しい時でも、焦らんとチームとうまいことやります。</div>
+      <div class="dialect-en">"Even when it's busy, I'll coordinate well with the team without panicking."</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 8 — MOTIVATION & GOALS
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🎯</span>
+    <span>Section 8: 志望動機・目標 <span class="s-sub">しぼうどうき・もくひょう — Motivation &amp; Goals</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q18 — Interviewer</div>
+      <div class="q-jp">飲食店でのアルバイトで何を学びたいですか？</div>
+      <div class="q-hira">いんしょくてんでのアルバイトでなにをまなびたいですか？</div>
+      <div class="q-en">What do you want to learn from working part-time at a restaurant?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">日本語の接客表現や、日本のサービスの高さを実際に体験しながら学びたいです。また、チームワークやスピード感を身に付け、社会人としての基礎力をつけたいと思っています。</div>
+      <div class="a-hira">にほんごのせっきゃくひょうげんや、にほんのサービスのたかさをじっさいにたいけんしながらまなびたいです。また、チームワークやスピードかんをみにつけ、しゃかいじんとしてのきそりょくをつけたいとおもっています。</div>
+      <div class="a-en">I want to learn Japanese customer-service expressions and experience the high level of service in Japan firsthand. I also want to develop teamwork, a sense of speed, and the basic skills needed as a working adult.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q19 — Interviewer</div>
+      <div class="q-jp">将来的にはどのようなことをしたいですか？</div>
+      <div class="q-hira">しょうらいてきにはどのようなことをしたいですか？</div>
+      <div class="q-en">What are your future plans or goals?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">日本語能力をさらに高めて、ゆくゆくは〇〇の分野で正社員として働きたいと思っています。そのためにも、まずはしっかりとした社会経験を積みたいです。</div>
+      <div class="a-hira">にほんごのうりょくをさらにたかめて、ゆくゆくは〇〇のぶんやでせいしゃいんとしてはたらきたいとおもっています。そのためにも、まずはしっかりとしたしゃかいけいけんをつみたいです。</div>
+      <div class="a-en">I want to further improve my Japanese ability and eventually work as a full-time employee in the 〇〇 field. For that reason, I want to first build solid working experience.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 9 — CHAIN-SPECIFIC QUESTIONS
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🏢</span>
+    <span>Section 9: チェーン別の質問 <span class="s-sub">チェーンべつのしつもん — Chain-Specific Questions</span></span>
+  </div>
+
+  <!-- Sukiya -->
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q20 — Sukiya (スキヤ) / Yoshinoya (吉野家)</div>
+      <div class="q-jp">牛丼の盛り付けや「並・大・特盛」などの盛りの種類は知っていますか？</div>
+      <div class="q-hira">ぎゅうどんのもりつけや「なみ・おお・とくもり」などのもりのしゅるいはしっていますか？</div>
+      <div class="q-en">Do you know the serving sizes ("Nami / Oo / Tokumori") for beef bowl (gyudon)?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、「並盛・大盛・特盛」はよく知っています。お客様のご注文を正確に受け、素早く提供できるよう頑張ります。</div>
+      <div class="a-hira">はい、「なみもり・おおもり・とくもり」はよくしっています。おきゃくさまのごちゅうもんをせいかくにうけ、すばやくていきょうできるようがんばります。</div>
+      <div class="a-en">Yes, I am familiar with "Nami-mori," "Oo-mori," and "Tokumori" (small, large, extra-large). I will work hard to take orders accurately and serve quickly.</div>
+    </div>
+  </div>
+
+  <!-- McDonald's -->
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q21 — McDonald's (マクドナルド)</div>
+      <div class="q-jp">マクドナルドの「スマイル０円」という文化についてどう思いますか？</div>
+      <div class="q-hira">マクドナルドの「スマイルゼロえん」というぶんかについてどうおもいますか？</div>
+      <div class="q-en">What do you think about McDonald's "Smile 0 Yen" culture?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">笑顔でお客様を迎えるというマクドナルドの文化はとても素晴らしいと思います。笑顔はお客様に安心感と温かさを伝えられるので、常に意識して接客したいです。</div>
+      <div class="a-hira">えがおでおきゃくさまをむかえるというマクドナルドのぶんかはとてもすばらしいとおもいます。えがおはおきゃくさまにあんしんかんとあたたかさをつたえられるので、つねにいしきしてせっきゃくしたいです。</div>
+      <div class="a-en">I think McDonald's culture of welcoming customers with a smile is wonderful. A smile conveys warmth and reassurance to customers, so I want to always be conscious of it in my service.</div>
+    </div>
+  </div>
+
+  <!-- Guukaku / Yakiniku -->
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q22 — Guukaku (牛角) / Yakiniku Restaurants</div>
+      <div class="q-jp">焼肉店では換気扇のそうじや網の交換など、体力が必要な作業があります。大丈夫ですか？</div>
+      <div class="q-hira">やきにくてんではかんきせんのそうじやあみのこうかんなど、たいりょくがひつようなさぎょうがあります。だいじょうぶですか？</div>
+      <div class="q-en">At a yakiniku restaurant, there are physically demanding tasks such as cleaning ventilation fans and replacing grills. Are you OK with that?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、問題ありません。体力には自信があります。飲食店をきれいに保つことはお客様へのサービスの一部だと思いますので、積極的に取り組みます。</div>
+      <div class="a-hira">はい、もんだいありません。たいりょくにはじしんがあります。いんしょくてんをきれいにたもつことはおきゃくさまへのサービスのいちぶだとおもいますので、せっきょくてきにとりくみます。</div>
+      <div class="a-en">Yes, no problem. I am confident in my physical stamina. I believe keeping the restaurant clean is part of the service to customers, so I will take it on actively.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Cultural Tip</div>
+      <div class="tip-text">At yakiniku restaurants like Guukaku (牛角), hall staff often assist customers in grilling meat and must monitor the grill heat. Being attentive and proactive at the table is highly valued.</div>
+    </div>
+  </div>
+
+  <!-- Saizeriya -->
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q23 — Saizeriya (サイゼリヤ)</div>
+      <div class="q-jp">注文はタブレット端末で受けていますが、使えますか？</div>
+      <div class="q-hira">ちゅうもんはタブレットたんまつでうけていますが、つかえますか？</div>
+      <div class="q-en">We take orders on a tablet. Can you handle that?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">はい、スマートフォンやタブレットの操作は得意です。新しいシステムでも、練習すればすぐに覚えられる自信があります。</div>
+      <div class="a-hira">はい、スマートフォンやタブレットのそうさはとくいです。あたらしいシステムでも、れんしゅうすればすぐにおぼえられるじしんがあります。</div>
+      <div class="a-en">Yes, I am comfortable with smartphones and tablets. I am confident I can quickly learn any new system with practice.</div>
+    </div>
+    <div class="note-block">
+      <div class="note-label">Note</div>
+      <div class="note-text">Saizeriya (サイゼリヤ) is well known for being beginner-friendly and for hiring many foreign nationals. They use handheld tablets for order taking and have a structured manual system — great for first-timers.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 10 — CLOSING QUESTIONS
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🙋</span>
+    <span>Section 10: 面接の締めくくり <span class="s-sub">めんせつのしめくくり — Closing the Interview</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q24 — Interviewer</div>
+      <div class="q-jp">何か質問はありますか？</div>
+      <div class="q-hira">なにかしつもんはありますか？</div>
+      <div class="q-en">Do you have any questions?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer A</div>
+      <div class="a-jp">はい、研修期間はどのくらいありますか？</div>
+      <div class="a-hira">はい、けんしゅうきかんはどのくらいありますか？</div>
+      <div class="a-en">Yes — how long is the training period?</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer B</div>
+      <div class="a-jp">外国人スタッフの方は今いらっしゃいますか？</div>
+      <div class="a-hira">がいこくじんスタッフのかたはいまいらっしゃいますか？</div>
+      <div class="a-en">Are there currently any foreign national staff members?</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Cultural Tip</div>
+      <div class="tip-text">In Japan, asking at least one thoughtful question shows initiative and genuine interest. Avoid asking about salary or days off in the first interview — this can create a negative impression.</div>
+    </div>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Q25 — Interviewer</div>
+      <div class="q-jp">最後に、意気込みを一言どうぞ。</div>
+      <div class="q-hira">さいごに、いきごみをひとことどうぞ。</div>
+      <div class="q-en">Finally, please say a word about your motivation.</div>
+    </div>
+    <div class="a-row">
+      <div class="a-label">Sample Answer</div>
+      <div class="a-jp">本日は面接のお時間をいただき、ありがとうございました。ぜひ採用していただき、お客様に喜ばれるスタッフになれるよう精一杯頑張ります。どうぞよろしくお願いいたします。</div>
+      <div class="a-hira">ほんじつはめんせつのおじかんをいただき、ありがとうございました。ぜひさいようしていただき、おきゃくさまによろこばれるスタッフになれるようせいいっぱいがんばります。どうぞよろしくおねがいいたします。</div>
+      <div class="a-en">Thank you very much for taking the time to interview me today. If I am hired, I will give my absolute best to become a staff member that customers are happy to see. I hope to work with you.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 11 — MANNER & ETIQUETTE
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">🎌</span>
+    <span>Section 11: 面接マナー <span class="s-sub">めんせつマナー — Interview Manner &amp; Etiquette</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Etiquette Rules</div>
+      <div class="q-jp">面接のマナー・服装</div>
+      <div class="q-hira">めんせつのマナー・ふくそう</div>
+      <div class="q-en">Interview Manner &amp; Dress Code</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Dress Code</div>
+      <div class="tip-text">Wear clean, neat clothes — dark trousers or skirt with a plain top. Avoid strong perfume or excessive accessories. For restaurant jobs, showing a clean, tidy appearance is a direct signal about your hygiene standards at work.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Punctuality</div>
+      <div class="tip-text">Arrive 5–10 minutes early. If you will be late, call the store immediately. Being on time is considered the absolute minimum in Japan — arriving late to an interview is almost always fatal.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Bowing</div>
+      <div class="tip-text">Bow at about 30° when you enter and leave the room, and when you thank the interviewer. A natural, sincere bow is more important than a perfect angle.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Phone</div>
+      <div class="tip-text">Turn your phone to silent before entering. Do not check your phone during the interview.</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">Entering the Room</div>
+      <div class="tip-text">Knock 2–3 times, wait for "どうぞ (douzo)", open the door, bow, say 「失礼します」(しつれいします — "Excuse me / May I come in"), then take your seat when invited to do so.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       SECTION 12 — AFTER THE INTERVIEW
+  ═══════════════════════════════════════ -->
+  <div class="section-header">
+    <span class="s-icon">📬</span>
+    <span>Section 12: 面接後 <span class="s-sub">めんせつご — After the Interview</span></span>
+  </div>
+
+  <div class="qa-card">
+    <div class="q-row">
+      <div class="q-label">Phrases to Use When Leaving</div>
+      <div class="q-jp">本日はありがとうございました。失礼いたします。</div>
+      <div class="q-hira">ほんじつはありがとうございました。しつれいいたします。</div>
+      <div class="q-en">Thank you very much for today. Excuse me (goodbye).</div>
+    </div>
+    <div class="tip-block">
+      <div class="tip-label">After the Interview</div>
+      <div class="tip-text">Bow deeply when leaving the room. If a staff member at the front desk helped you, say thank you to them too. The interview does not end at the door — assume you may be observed in the car park or lobby.</div>
+    </div>
+    <div class="note-block">
+      <div class="note-label">Result Timing</div>
+      <div class="note-text">Most fast-food and family restaurant chains will call or email you within 3–7 days. Sukiya and McDonald's may give results within a few days. If you have not heard back after a week, it is acceptable to call the store politely and ask.</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       VOCAB QUICK-REFERENCE TABLE
+  ═══════════════════════════════════════ -->
+  <div class="vocab-section">
+    <h3>📚 Key Vocabulary — Restaurant Interview Quick-Reference</h3>
+    <div class="vocab-table-wrap"><table class="vocab-table">
+      <thead>
+        <tr>
+          <th>Japanese</th>
+          <th>Hiragana</th>
+          <th>English</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="vocab-jp">飲食店</td><td class="vocab-hira">いんしょくてん</td><td class="vocab-en">Restaurant / food-and-beverage establishment</td></tr>
+        <tr><td class="vocab-jp">接客</td><td class="vocab-hira">せっきゃく</td><td class="vocab-en">Customer service / serving customers</td></tr>
+        <tr><td class="vocab-jp">ホール</td><td class="vocab-hira">ホール</td><td class="vocab-en">Dining floor / front-of-house</td></tr>
+        <tr><td class="vocab-jp">キッチン</td><td class="vocab-hira">キッチン</td><td class="vocab-en">Kitchen / back-of-house</td></tr>
+        <tr><td class="vocab-jp">シフト</td><td class="vocab-hira">シフト</td><td class="vocab-en">Shift / work schedule</td></tr>
+        <tr><td class="vocab-jp">研修</td><td class="vocab-hira">けんしゅう</td><td class="vocab-en">Training period</td></tr>
+        <tr><td class="vocab-jp">敬語</td><td class="vocab-hira">けいご</td><td class="vocab-en">Formal / polite Japanese language</td></tr>
+        <tr><td class="vocab-jp">いらっしゃいませ</td><td class="vocab-hira">いらっしゃいませ</td><td class="vocab-en">Welcome! (greeting when a customer enters)</td></tr>
+        <tr><td class="vocab-jp">少々お待ちください</td><td class="vocab-hira">しょうしょうおまちください</td><td class="vocab-en">Please wait a moment</td></tr>
+        <tr><td class="vocab-jp">ご注文はお決まりですか？</td><td class="vocab-hira">ごちゅうもんはおきまりですか？</td><td class="vocab-en">Are you ready to order?</td></tr>
+        <tr><td class="vocab-jp">お会計</td><td class="vocab-hira">おかいけい</td><td class="vocab-en">The bill / payment</td></tr>
+        <tr><td class="vocab-jp">申し訳ございません</td><td class="vocab-hira">もうしわけございません</td><td class="vocab-en">I am terribly sorry (deep apology)</td></tr>
+        <tr><td class="vocab-jp">衛生管理</td><td class="vocab-hira">えいせいかんり</td><td class="vocab-en">Hygiene management</td></tr>
+        <tr><td class="vocab-jp">食中毒</td><td class="vocab-hira">しょくちゅうどく</td><td class="vocab-en">Food poisoning</td></tr>
+        <tr><td class="vocab-jp">アレルギー</td><td class="vocab-hira">アレルギー</td><td class="vocab-en">Allergy</td></tr>
+        <tr><td class="vocab-jp">ピーク時間</td><td class="vocab-hira">ピークじかん</td><td class="vocab-en">Peak hours / rush hour</td></tr>
+        <tr><td class="vocab-jp">牛丼</td><td class="vocab-hira">ぎゅうどん</td><td class="vocab-en">Beef bowl (Sukiya / Yoshinoya specialty)</td></tr>
+        <tr><td class="vocab-jp">並盛・大盛・特盛</td><td class="vocab-hira">なみもり・おおもり・とくもり</td><td class="vocab-en">Regular / Large / Extra-large serving size</td></tr>
+        <tr><td class="vocab-jp">焼肉</td><td class="vocab-hira">やきにく</td><td class="vocab-en">Grilled meat / BBQ (Guukaku type)</td></tr>
+        <tr><td class="vocab-jp">換気扇</td><td class="vocab-hira">かんきせん</td><td class="vocab-en">Ventilation fan (common cleaning task at yakiniku)</td></tr>
+        <tr><td class="vocab-jp">採用</td><td class="vocab-hira">さいよう</td><td class="vocab-en">Hiring / employment offer</td></tr>
+        <tr><td class="vocab-jp">時給</td><td class="vocab-hira">じきゅう</td><td class="vocab-en">Hourly wage</td></tr>
+        <tr><td class="vocab-jp">残業</td><td class="vocab-hira">ざんぎょう</td><td class="vocab-en">Overtime work</td></tr>
+        <tr><td class="vocab-jp">正社員</td><td class="vocab-hira">せいしゃいん</td><td class="vocab-en">Full-time / permanent employee</td></tr>
+        <tr><td class="vocab-jp">アルバイト</td><td class="vocab-hira">アルバイト</td><td class="vocab-en">Part-time job</td></tr>
+        <tr><td class="vocab-jp">制服</td><td class="vocab-hira">せいふく</td><td class="vocab-en">Uniform</td></tr>
+        <tr><td class="vocab-jp">賄い</td><td class="vocab-hira">まかない</td><td class="vocab-en">Staff meal (free/discounted food for employees)</td></tr>
+        <tr><td class="vocab-jp">手洗い</td><td class="vocab-hira">てあらい</td><td class="vocab-en">Hand washing</td></tr>
+        <tr><td class="vocab-jp">閉店・開店</td><td class="vocab-hira">へいてん・かいてん</td><td class="vocab-en">Closing time / Opening time</td></tr>
+        <tr><td class="vocab-jp">発注・在庫</td><td class="vocab-hira">はっちゅう・ざいこ</td><td class="vocab-en">Ordering stock / inventory</td></tr>
+        <tr><td class="vocab-jp">廃棄</td><td class="vocab-hira">はいき</td><td class="vocab-en">Disposal / discarding expired food</td></tr>
+        <tr><td class="vocab-jp">一生懸命</td><td class="vocab-hira">いっしょうけんめい</td><td class="vocab-en">With all one's effort / diligently</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <p>🇯🇵 レストラン・飲食店 アルバイト 面接ガイド — Restaurant Part-Time Job Interview Guide</p>
+  <p>Covers: スキヤ (Sukiya) · マクドナルド (McDonald's) · 牛角 (Guukaku) · 吉野家 (Yoshinoya) · サイゼリヤ (Saizeriya) · モスバーガー (MOS Burger) · ガスト (Gusto) · くら寿司 (Kurazushi)</p>
+  <p style="margin-top:.6rem">Good luck with your interview! 面接、頑張ってください！（めんせつ、がんばってください！）</p>
+  <p style="margin-top:.4rem"><a href="index.html" style="color:var(--accent);text-decoration:none;">← Back to All Guides</a></p>
+</footer>
+
+</body>
+</html>
